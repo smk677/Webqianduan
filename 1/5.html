@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <table border="1"  width="300px" height="150px" cellpadding="10" cellspacing="0" align="center">
+         <tbody>
+             <caption>表格标题</caption>
+             <!-- 表格的表头，加粗用th -->
+             <tr>
+                 <th>姓名</th>
+                 <th>性别</th>
+                 <th>年龄</th>
+             </tr>
+             <tr>
+                 <td>深深</td>
+                 <td >男</td>
+                 <td>23</td>
+             </tr>
+             <tr>
+                 <td>散打</td>
+                 <td>男</td>
+                 <td>34</td>
+             </tr>
+             <tr>
+                <td>看那个</td>
+                <td>女</td>
+                <td>23</td>
+             </tr>
+         </tbody>
+        </table>
+        <!-- 合并单元格 -->
+        <table border="1" width="500" height="300" cellspacing="0" cellpadding="0" align="center">
+            <caption>个人简历</caption>
+          <tbody>
+              <tr>
+                <td>刘德华</td>
+                <td>男</td>
+                <td>18</td>
+                <td rowspan="2">照片</td>
+              </tr>
+              <tr>
+                <td>身高</td>
+                <td>汉族</td>
+                <td>已婚</td>
+                <!-- <td>这个单元格是用来合并的</td> -->
+              </tr>
+              <tr>
+                <td>个人作品</td>
+                <td colspan="3">个人作品</td>
+                <!-- <td></td>
+                <td></td> -->
+              </tr>
+              <tr>
+                <td>个人简历</td>
+                <td colspan="3">个人简历</td>
+               <!--  <td></td>
+                <td></td> -->
+              </tr>
+          </tbody>
+        </table>
+
+        <!-- 表格划分结构 -->
+        <table border="1" align="center" cellspacing="0" width="600" height="150">
+            <!-- 表的表头 -->
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                </tr>
+            </thead>
+            <!-- 表的主体部分 -->
+            <tbody>
+                <tr>
+                    <td>刘德华</td>
+                    <td>男</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>刘若英</td>
+                    <td>女</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>刘晓庆</td>
+                    <td>女</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>刘三姐</td>
+                    <td>女</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+            <!-- 表的底部 -->
+            <tfoot>
+                <tr>
+                    <td>信息地址</td>
+                    <td colspan="2">北京市金燕龙校区举办演唱会</td>
+                    <!-- <td>列合并</td> -->
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

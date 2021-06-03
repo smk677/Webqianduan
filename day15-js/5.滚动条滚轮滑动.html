@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            overflow: hidden;
+        }
+        #bar{
+            width: 40px;
+            height: 100%;
+            background-color: burlywood;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        #box{
+            width: 40px;
+            height: 50px;
+            background-color: chartreuse;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="con"></div>
+    <div id="bar">
+        <div id="box"></div>
+    </div>    
+
+    <script>
+        var oCon=document.getElementById("con");
+        var oBar=document.getElementById("bar");
+        var oBox=document.getElementById("box");
+        for(var i=1;i<100;i++){
+           oCon.innerHTML+=i+"<br>"
+        }
+        oBox.onmousedown = function (e) {
+            e.preventDefault();
+            var mosBoxY = e.offsetY;
+
+           document.onmousemove=function(e){
+            e.preventDefault();
+             var mosMovY=e.clientY-mosBoxY;
+
+             if(mosMovY<0){
+                 mosMovY=0
+             }
+             if(mosMovY>=document.documentElement.clientHeight-oBox.offsetHeight){
+                mosMovY=document.documentElement.clientHeight-oBox.offsetHeight
+             }
+
+             oBox.style.top=mosMovY+"px";
+
+              //文档能移动的距离
+                var wdHeight=oCon.offsetHeight-document.documentElement.clientHeight;
+                //能够滑动的距离
+                var oBarHeight=oBar.clientHeight-oBox.offsetHeight;
+                //文档能移动的距离 比 能够滑动的距离
+                var bili=wdHeight/oBarHeight;
+                //mosMovY滑动块移动的距离 乘以 这个比例就是对应的文档内容移动的距离
+                var wdY=mosMovY*bili;
+                //赋值给文档
+                 oCon.style.transform="translateY(-"+wdY+"px)"; 
+                }
+                
+        document.onmouseup=function(){
+            document.onmousemove = null;
+            document.onmouseup=null;
+        }
+
+        }
+
+
+        //滑块高度自适应
+            //窗口高度/文档高度=滑块高度/滑槽的高度
+            var winH=document.documentElement.clientHeight;
+            var conH=oCon.offsetHeight;
+            var huacH=oBar.clientHeight;
+            
+            //滑块高度
+            var wcbi=conH/huacH;
+             var huakH=winH/wcbi;//
+             console.log(huakH);
+
+            //赋值给滑块
+            oBox.style.height=huakH+"px";
+
+        
+        document.addEventListener("DOMMouseScroll",fn1,false);
+       document.onmousewheel = fn1;
+        function fn1(e){
+            var t=oBox.offsetTop;
+          if(e.wheelDelta){//判断是否为chrome/IE
+            if(e.wheelDelta>0){
+                t-=5;
+            console.log("上滚上滚");
+         }else{
+            t+=5;
+            console.log("下滚下滚");
+         }   
+        }else if(e.detail){//判断是否为firefox
+            if(e.detail>0){
+                t+=5;
+            console.log("下滚下滚");
+         }else{
+            t-=5;
+            console.log("上滚上滚");
+         }  
+        }
+        if(t<0){
+           t=0;
+        }
+        if(t>=oBar.clientHeight-oBox.offsetHeight){
+           t=oBar.clientHeight-oBox.offsetHeight;
+        }
+        oBox.style.top=t+"px";
+        //根据滑块滑动的距离计算文档要走的距离
+        var conY=t*wcbi;
+        oCon.style.transform="translateY(-"+conY+"px)";
+      }
+     
+           
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- undefind出现的情况
+            1.未给变量赋值:
+                  var a;
+                  document.write(a);
+            
+            2.设置一个函数时，未给里面的形参传值:
+                  function aa(name,age,sex,address){
+                    document.write("姓名:"+name+"</br>");
+                    document.write("年龄:"+age+"</br>");
+                    document.write("性别:"+sex+"</br>");
+                    document.write("地址:"+address+"</br>");
+                }
+                //调用函数名为aa的函数,挨个进行赋值
+                aa("小华",24,"男","湖南");
+                aa("小华",24,"男");
+            3.调用一个对象时，调用对象没有的属性：
+                var man={
+                name:"时代",
+                sex:"男",
+                age:18
+                }
+                document.write(man.name+"</br>"+man.sex+"</br>"+man.age);
+                document.write("</br>"+man.address);
+            4.在一个函数里面，如果没有返回值的时候：
+
+        -->
+        <script>
+        //1.
+         /*   var a;
+           document.write(a); */
+          /* 设置一个function函数,函数名叫aa，里面的参数有name,age,sex,address
+          */
+        //2.
+           /* function aa(name,age,sex,address){
+               document.write("姓名:"+name+"</br>");
+               document.write("年龄:"+age+"</br>");
+               document.write("性别:"+sex+"</br>");
+               document.write("地址:"+address+"</br>");
+           }
+           //调用函数名为aa的函数,挨个进行赋值
+           aa("小华",24,"男","湖南");
+           aa("小华",24,"男"); */
+
+        //3.
+         /*  var man={
+              name:"时代",
+              sex:"男",
+              age:18
+          }
+          document.write(man.name+"</br>"+man.sex+"</br>"+man.age);
+          document.write("</br>"+man.address); */
+        //4.
+        function rt(a,b){
+            console.log(a-b);
+            //返回a-b的结果，不然下面拿不到结果
+            return a-b;
+        }
+        //设置一个rs变量用来接受return的返回结果
+        var rs=rt(a=9,b=5);//调用rt函数并进行参数赋值
+        document.write(rs);
+        </script>
+    </body>
+</html>

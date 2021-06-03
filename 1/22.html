@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .father{
+            width: 1200px;
+            height: 67px;
+            /* border: 1px solid red; */
+            margin: 150px auto;
+            text-align: center;
+            line-height: 67px;
+            font-size: 0;
+            background: #F7F7F7;
+        }
+        .father a{
+           display: inline-block;
+           width: 120px;
+           height: 40px;
+           border-right:1px solid #E1E1E1;
+           vertical-align: middle;
+           box-sizing: border-box;
+        }
+        /* 
+         当一个标签设置了重复属性时
+         一定要注意选择器的权重问题
+         */
+        a.borth{
+            border-right:0px;
+        }
+        /* .father a img{
+           width: 97px;
+           height: 37px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="father">
+         <a href="#">
+             <img src="imgs/brand_03.png" alt="">
+         </a>
+         <a href="#">
+            <img src="imgs/brand_05.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_07.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_09.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_11.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_13.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_15.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_17.png" alt="">
+        </a>
+        <a href="#">
+            <img src="imgs/brand_19.png" alt="">
+        </a>
+        <a href="#" class="borth">
+            <img src="imgs/brand_21.png" alt="">
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+        <script>
+          /* 
+           try{}catch{}finally{}：异常处理语句
+            try{
+                调试代码块
+            }catch{
+                处理的异常代码块
+            }finally{
+                无论怎样都会执行
+            }
+            常见的异常错误：
+            Error:普通异常
+            SyntaxError：出现语法错误时抛出
+            TypeError:值的类型出现错误时抛出
+            ReferenceError：读取不存在的变量时抛出
+          */
+          // 1.for(var i=1;i<10;i++)//SyntaxError
+             
+          /* 2.  var oLis=document.getElementsByTagName("li");
+            oLis.style.color="red"; //TypeError
+            */
+           /*  oLis[0].style.backgroundColor="red"; */
+           //2.document.write(a);//RefereceError
+
+           /* 
+           其它两种弹出框：
+            confirm：确认框
+              返回值确认用户是确定还是取消
+            prompt:输入框
+                返回值是用户输入的值或者为空
+           */
+         /*  confirm("dsada");
+          prompt("sdada"); */
+         /*  prompt("叫爷爷"); */
+           
+         //利用prompt实现账户登录
+        /*  var userName=prompt("请输入账号");
+         var userPass=prompt("请输入密码");
+         if(userName!=="牛逼"){
+              userName=prompt("账号错误");
+         }else{
+             if(userPass!=="123"){
+                userPass=prompt("密码错误");
+             }
+         }
+         alert("登录成功"); */
+
+         /* 
+          利率：
+         */
+      /*   var benji=10000;
+        var finallybenji=2*benji;
+        var year=0;
+        var oYear=prompt("请输入利率（1.01--1.5之间）");
+        for(benji;benji<finallybenji;year++){
+            benji=oYear*benji;
+        }
+        document.write(parseFloat(year)); */
+        /* 
+        ATM练习
+        */
+        /* var oPut=prompt("请输入(1.取钱 2.存钱 3.查询 4.打劫)");
+        switch(Number(oPut)){
+            case 1:
+                alert("取钱");
+                break;
+            case 2:
+                alert("存钱");
+                break;
+            case 3:
+                alert("查询");
+                break;
+            case 4:
+                alert("打劫");   
+                break; 
+            default:
+                alert("暂时没有开通其它服务");    
+        } */
+
+          /*
+         * 公司给员工买保险（用户通过此程序查询自己是否符合条件）：
+         * 只要结婚的都买
+         * 没有结婚的男人 25岁以下不买
+         * 没有结婚的姑娘 22岁以下不买
+         */
+       var jieh=prompt("是否结婚 （结婚扣1，没结婚扣2）");
+       if(jieh=="1"){
+          alert("可以买保险");
+       }else{ 
+          var sex=prompt("是男是女（男扣1，女扣2）");
+          var year=prompt("年龄");
+           if(sex=="1" && year>="25"){
+            alert("可以买保险");
+            }else{alert("恭喜你没资格！！");}
+           if(sex=="2" && year>="22"){
+             alert("可以买保险");
+            }else{alert("恭喜你没资格！！");}
+          }
+        </script> 
+    </body>
+</html>

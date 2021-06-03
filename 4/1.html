@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+         #father{
+             width: 500px;
+             margin: auto;
+         }
+         #father ul{
+             margin: 0;
+             padding: 0px;
+             list-style-type: none;
+         }
+         #father ul li h4{
+             margin: 0px;
+             padding: 0px;
+             height: 35px;
+             line-height: 35px;
+             color: #fff;
+         }
+         #father ul li.one h4{
+            background: #DBE5F3;
+         }
+         #father ul li.two h4{
+            background: #F3E0E8;
+         }
+         #father ul li.three h4{
+            background: #CF93C1;
+         }
+         #father ul li.four h4{
+            background: #BECB86;
+         }
+         #father ul li.five h4{
+            background: #AD9BAD;
+         }
+         #father ul li  img{
+             display:inline-block;
+             width:0px;
+             height:0px;
+             border-radius: 5px;
+             transition-property: width,height,margin;
+             transition-duration: 1s;
+             transition-timing-function: linear;
+           
+         }
+         #father ul li div{
+                width: 500px;
+                height: 0px;
+                text-align:center;
+                transition-property:width,height;
+                transition-duration:1s;
+                transition-timing-function: linear;     
+         }
+         #father ul li:hover div{
+                height: 300px;
+         }
+         #father ul li:hover div img{
+             width: 300px;
+             height: 200px;
+             margin: 50px 0px;
+             transition-delay: 1s;
+         }
+	</style>
+</head>
+
+<body>
+	 <div id="father">
+         <ul>
+             <li class="one">
+                 <h4>温柔贤惠</h4>
+                 <div>
+                     <img src="./imgs/56af0da3ae601.jpg" alt="">
+                 </div>
+             </li>
+             <li class="two">
+                 <h4>甜美时尚</h4> 
+                <div> 
+                    <img src="./imgs/5710984334b7e.jpg" alt="">
+                </div>
+            </li>
+            <li class="three">
+                <h4>独立稳重</h4> 
+                <div>
+                    <img src="./imgs/5ba44d4304441.jpg" alt="">
+                </div>
+            </li>
+            <li class="four">
+                <h4>妖媚性感</h4> 
+                <div>
+                     <img src="./imgs/5cb450ae20929.jpg" alt="">
+                </div>
+            </li>
+            <li class="five">
+                <h4>女汉子</h4> 
+                <div>
+                     <img src="./imgs/F8F2-fxipenp2527999.jpg" alt="">
+                </div>
+            </li>
+         </ul>
+     </div>
+</body>
+
+</html>  

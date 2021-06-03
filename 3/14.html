@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+       ul{
+           margin: 100px 110px;
+           padding: 0px;
+           list-style-type: none;
+       } 
+       li{
+           margin-bottom: 10px;
+           /* border: 1px solid rebeccapurple; */
+       }
+       li input{
+           display: none;
+       }
+       li label{
+           display:inline-block;
+           background-color: #ADD7F0;
+          /*  border: 1px solid black; */
+           color: #fff;
+           padding-right: 5px;
+       }
+       li label::before{
+           display:inline-block;
+           margin: 0px;
+           margin-right: 10px;
+           content:"x";
+           width: 30px;
+           height: 30px;
+           line-height: 30px;
+           text-align: center;
+          /*  border: 1px solid yellowgreen; */
+       }
+       li input:checked+label::before{
+        content:"✔";
+       }
+       li input:checked+label{
+        background-color: #2489C5;
+       }
+    </style>
+</head>
+
+<body>
+    <ul>
+       <li>
+           <input type="checkbox" name="mein1" id="mn1"><label for="mn1">贤淑端庄型</label>
+        </li>
+       <li>
+           <input type="checkbox" name="mein1" id="mn2"><label for="mn2">温良贤惠型</label>
+        </li>
+       <li>
+           <input type="checkbox" name="mein1" id="mn3"><label for="mn3">性感放浪型</label>
+        </li>
+       <li>
+           <input type="checkbox" name="mein1" id="mn4"><label for="mn4">哀婉可人型</label>
+        </li>
+       <li>
+           <input type="checkbox" name="mein1" id="mn5"><label for="mn5">大气无畏型</label>
+        </li> 
+    </ul>
+    </body>
+</html>

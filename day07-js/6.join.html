@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        join方法：
+          1.把数组转为字符串
+          2.可以在join方法中传入参数，替代字符串中的逗号
+          3.不会改变原数组，返回的是一个字符串
+          4.其实是把每一个元素调用了toString方法转字符串（null和undefined转为空串）
+        */
+       var array=[1,null,2,3,4,"d"]
+       //1.和2 的情况
+       //console.log(array.join());//1,,2,3,4,d,返回的值是一个字符串
+       
+        //2的情况
+         console.log(array.join("-"));   
+         
+   </script>
+</body>
+</html>

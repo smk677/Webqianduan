@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        .sj a{
+            color: black;
+           text-decoration: none;
+        }
+          .sj a:hover {
+             color: goldenrod;
+          }
+          .sj a:active{
+              color: blueviolet;
+          }
+         
+         /* 
+         ---------------------------------------------
+          */
+          span{
+              /* 
+              行内元素转化为块级元素
+               */
+              display: block;
+              width: 50px;
+              height: 60px;
+              background: pink;
+          }
+         div{
+             /* 
+             块级元素转化为行内元素
+              */
+             display: inline;
+             background: rebeccapurple;
+         }
+         a#lx{
+             /* 
+             转化为行内块元素
+              */
+             display: inline-block;
+             width: 50px;
+             height: 30px;
+             background: greenyellow;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="sj">
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+            <a href="#">手机</a>
+        </div>
+        <div>
+            <a href="#">没有妈妈的孩子像棵草</a>
+        </div>
+
+        <!-- 练习元素的类型转换 -->
+        <span>行内</span>
+        <span>行内</span>
+        <div>div是块级元素</div>
+        <div>div是块级元素</div>
+        <a href="www.baidu.com" id="lx">百度</a>
+        <a href="www.baidu.com" id="lx">百度</a>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+         /* 
+          当语句要重复调用多次，这时候就可以用函数封装的办法
+          减少代码重复
+         */
+       
+       /*  document.write("你好儿子"+"<br>");
+        document.write("我是叫隔壁老王"+"<br>");
+        document.write("是你的亲身嗲滴，呕"+"<br>");
+
+        document.write("你好儿子"+"<br>");
+        document.write("我是叫隔壁老王"+"<br>");
+        document.write("是你的亲身嗲滴，呕"+"<br>");
+
+        document.write("你好儿子"+"<br>");
+        document.write("我是叫隔壁老王"+"<br>");
+        document.write("是你的亲身嗲滴，呕"+"<br>"); */
+         //封装函数,简化上面代码,用几次就调用几次
+        /*  function hans(){
+            document.write("你好儿子"+"<br>");
+            document.write("我是叫隔壁老王"+"<br>");
+            document.write("是你的亲身嗲滴，呕"+"<br>");
+         }
+         hans();
+         hans();
+         hans();
+         hans(); */
+
+         /* 
+         函数的声明：
+         1.直接声明：
+         function(){
+
+         }（匿名函数：声明函数没给函数起名）
+         或者function 标识符（自己取名：函数名）(){
+
+         }
+         2.函数表达式:把函数的返回值返回给一个变量fun
+         var fun=function(){
+            return;//可以不返回值，看自己是否需要
+         }
+         3.函数实例化：
+         var fun=new Function("a","b","c","document.write(a+b+c)；document.write(a+b+c)");
+        Function里面的参数都是字符串,a,b,c都是参数
+        document.write(a+b+c)表示函数结构体，多个结构体用分号隔开
+
+        函数的调用：
+           1.匿名函数：
+           (function(){
+
+           })();
+           2.使用一元运算符
+           +function(){
+
+           }();
+           ...........
+
+           3.小括号的作用("()"):
+             提升优先级
+             调用函数
+         */
+        // 2.函数表达式:把函数的返回值返回给一个变量fun
+        //function里面的啊，a,b,c是形参  
+        /*  return：
+               1.返回值
+               2.退出函数
+               */
+        /*  var fun=function(a,b,c){
+             var re=a+b+c;
+             return re;//可以不返回值，看自己是否需要
+             document.write(re);
+         }
+         //调用函数fun，如果函数被赋值了就是实参
+         fun(1,2,3) */
+       
+        // 3.函数实例化：
+        /*  var fun=new Function("a","b","c","document.write(a+b+c+'<br>');document.write(a+b+c)");
+         fun(1,2,3); */
+
+
+         /* 
+          获取函数的参数个数
+         */
+         /* var fun=function(a,b,c){
+             var re=a+b+c;
+             return re;//可以不返回值，看自己是否需要
+         }
+         document.write(fun.length); */
+
+         /*  
+          arguments对象表示函数的实参集合，是一个伪类数组，只能在函数内部使用,数组的值对应着实参的下表document.write(arguments[0]);
+          通过arguments.length可以获取实参的个数
+         */
+        /*  var fun=function(a,b,c){
+            //document.write(arguments[0]);
+            //document.write(arguments.length);
+            console.log(arguments);
+         }
+          fun(1,2,3,4,5); */
+          /* 
+          使用arguments进行实参值得累加
+          */
+         /*  var fun=function(a,b,c){
+            var sum=0;
+            for(var i=0;i<arguments.length;i++){
+                sum+=arguments[i];
+            }
+            document.write(sum+"<br>");
+         }
+          fun(1,2,3,4,5); */
+
+         
+        </script> 
+    </body>
+</html>

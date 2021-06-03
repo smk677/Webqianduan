@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+       <ul>
+           <li></li>
+           <li ></li>
+           <li></li>
+           <li></li>
+           <li></li>
+       </ul>
+        <script>
+          var oItem=document.getElementsByTagName("li");
+           /*  oItem[0].onclick=function(){
+              this.style.backgroundColor="green";
+             }
+          oItem[1].onclick=function(){
+              this.style.backgroundColor="red";
+          }
+          oItem[2].onclick=function(){
+              this.style.backgroundColor="red";
+          }
+          oItem[3].onclick=function(){
+              this.style.backgroundColor="red";
+          }
+          oItem[4].onclick=function(){
+              this.style.backgroundColor="red";
+          } */
+          for(var i=0;i<oItem.length;i++){
+              //那个点击那个变红
+            oItem[i].onclick=function(){
+              this.style.backgroundColor="red";
+              console.log(i);
+          }
+          }
+        </script>
+    </body>
+</html>

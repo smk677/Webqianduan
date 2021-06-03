@@ -1,0 +1,22 @@
+//进行模式匹配的时候，如果参数是@_的混合，那么调用它的时候是必选的
+//.+混合名+()+{属性的合集}
+.meat(@_){
+      width: 200px;
+      height:200px;
+}
+//这个参数不是用来向混合内部传递的  而是用来识别匹配的
+.meat(color_1){
+    background-color: aqua;
+}
+//这个参数不是用来向混合内部传递的  而是用来识别匹配的
+.meat(color_2){
+    background-color: rebeccapurple;
+}
+#out{
+      //模式匹配到相应的混合
+    //匹配的关系类似于 switch语句
+   .meat(color_1);
+}
+#box{
+    .meat(color_2);
+}

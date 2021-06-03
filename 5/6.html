@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./font/iconfont.css" type="text/css" rel="stylesheet" />
+    <style>
+        /* 初始化 */
+        body {
+            margin: 0;
+        }
+
+        div.A {
+            display: flex;
+            width: 600px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        div>div:first-child {
+            /* flex-grow的意思是剩余的空白怎么分配，默认为0 */
+            flex-grow: 1;
+            width: 100px;
+            background-color: salmon;
+        }
+
+        div>div:nth-of-type(2) {
+            flex-grow: 1;
+            width: 100px;
+            background-color: springgreen;
+        }
+
+        div>div:last-child {
+            flex-grow: 1;
+            width: 100px;
+            background-color: thistle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="A">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

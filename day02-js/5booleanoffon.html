@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+            #box{
+                width: 200px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <button type="button" id="btn">变色</button>
+        <script>
+         /* 
+          运用boolean的开关思想(true,false)
+         */
+         var oBox=document.getElementById("box");
+         var oBtn=document.getElementById("btn");
+    
+          //用一个变量来储存boolean
+          var nf=false;
+          
+          oBtn.onclick=function(){
+              if(nf===false){
+              oBox.style.backgroundColor="green";
+              nf=true
+            }else{
+                oBox.style.backgroundColor="red";
+                nf=false
+            }
+          }
+        </script>
+         
+    </body>
+</html>

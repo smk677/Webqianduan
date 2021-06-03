@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="out">
+        Isout
+        <div id="inner">
+            Isinner
+            <div id="con">Iscon</div>
+        </div>
+    </div> -->
+
+    <div id="box">box</div>
+      
+    <script>
+        /* 
+          事件模型：(绑定事件的方式)
+              基本事件模型(DOM0) oBox.onclick=function(){};
+              DOM2事件模型(符合W3C的规范)
+              IE事件模型(IE支持)
+              网景事件模型（现在已经没有了）
+          
+          事件流(事件机制)：
+             就是多个节点对同一事件进行响应的先后顺序，主要包括3种：
+              1、捕获：由网景提出，由最不精确的元素依次向最精确的元素（target目标元素）传播
+
+              2、冒泡：由IE提出，由最精确的元素（target目标元素）依次向外层元素（最不精确的元素）传播
+
+              3、W3C的事件流：三个阶段
+                1、先   捕获：由最不精确的元素依次向最精确的元素
+                2、再   执行目标元素的事件：
+                3、最后 冒泡：由最精确的元素（target目标元素）依次向外层元素（最不精确的元素）传播
+        */
+         
+        //Dom0的绑定事件：
+        /*   var oOut=document.querySelector("#out");
+          var oInner=document.querySelector("#inner");
+          var oCon=document.querySelector("#con"); */
+ 
+
+          /* oCon.onclick=function(){
+              console.log("con1")
+          } */
+
+          // 1、给元素的事件属性赋值一个事件处理函数即可
+          //先封装，点击时调用
+         /*  function fn(){
+              console.log("con1")
+          } 
+          oCon.onclick=fn; */
+          
+          //Dom0绑定事件，DOM0如果给同一个元素绑定同一个事件多次，则会按顺序执行，后面事件会覆盖前面事件
+         /*  oCon.onclick=function(){
+              console.log("con1")
+          }
+          oCon.onclick=function(){
+              console.log("con2")
+          }
+          oCon.onclick=function(){
+              console.log("con3")
+          } */
+         
+          //给父级元素绑定事件，会冒泡执行（只支持冒泡）
+         /*  oCon.onclick=function(){
+              console.log("con1")
+          }
+          oInner.onclick=function(){
+              console.log("Isinner")
+          }
+          oOut.onclick=function(){
+              console.log("Isout")
+          } */
+
+          /* 2.Dom2绑定事件：
+               1、使用 addEventListener()方法给元素注册一个事件
+                 参数1：事件名（不带on）("click",参数2,参数3)
+                 参数2：事件处理函数
+                 参数3：布尔值，true表示捕获，false表示冒泡，默认false
+               
+               2、特点：
+                   可以给同一个元素绑定多次相同事件 ，按书写顺序执行
+                   可以控制冒泡和捕获
+                
+               3、选择绑定事件：
+                  1、如果当前的事件是DOM2级事件，则必须通过DOM2绑定（DOMContentLoaded事件）
+                  2、考虑是否冒泡和捕获
+                  3、如果对同一个元素绑定同一个事件多次，则选择DOM2
+          */
+        // 2.Dom2绑定事件：
+          //给同一个元素绑定多次相同事件
+           /* oCon.addEventListener("click",function(){
+               console.log("是Iscon1");
+           },false);
+           oCon.addEventListener("click",function(){
+               console.log("是Iscon2");
+           },false);
+           oCon.addEventListener("click",function(){
+               console.log("是Iscon3");
+           },false); */
+
+          //冒泡和捕获,按W3C事件流（先捕获再执行目标事件，最后冒泡）
+         /*  oCon.addEventListener("click",function(){
+            console.log("Iscon");
+           },false);
+          oInner.addEventListener("click",function(){
+            console.log("Isinner");
+           },true);
+          oOut.addEventListener("click",function(){
+            console.log("Isout");
+           },false);
+          document.addEventListener("click",function(){
+            console.log("Isdocument");
+           },true); */
+
+           /* 
+            IE事件模型：
+                使用attachEvent()方法绑定
+                  参数1：on+事件名 
+                  参数2: 事件函数
+                  IE事件模型只能支持冒泡
+           */
+
+          //IE事件模型：(只支持IE浏览器)
+          /*  var oBox=document.querySelector("#box");
+           oBox.attachEvent("onclick",function(){
+               console.log("这是IE绑定事件的方式")
+           });
+           oBox.attachEvent("onclick",function(){
+               console.log("这是IE绑定事件的方式2")
+           });
+           oBox.attachEvent("onclick",function(){
+               console.log("这是IE绑定事件的方式3")
+           }); */
+    </script>
+</body>
+</html>

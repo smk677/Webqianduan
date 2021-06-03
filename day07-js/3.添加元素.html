@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1和2如果跟5比：
+           1，2如果插入的值是数组，他不会打散数组，而是作为一个值插入数组
+          给数组添加元素的方法：
+           1.push()：给数组尾部（可以是一个或多个）添加值并返回附加元素以后，数组的长度,push会改变了原数组
+
+            var array=[1,2,3,4,5]
+            console.log(array.push("a","b"));//返回的是添加元素之后数组的值
+            console.log(array);//Array(7) [ 1, 2, 3, 4, 5, "a", "b" ],改变了原数组
+
+           2.unshift():给数组头部（可以是一个或多个）添加值并返回附加元素以后，数组的长度,push会改变了原数组
+
+            var array=[1,2,3,4,5];
+            console.log(array.unshift("a","b","c"));//返回的是添加元素之后数组的值
+            console.log(array);//Array(8) [ "a", "b", "c", 1, 2, 3, 4, 5 ],改变了原数组
+
+            3.使用splice()：前两个参数分别代表数组的下标（参数1）和从下标开始删除多少值（参数2），后面的参数就代表要给数组添加的值
+            
+              var array=[1,2,3,4,5];
+                var re=array.splice(3,0,"a","s","d");
+                console.log(re);//返回的是删除的值，Array []但是我没删所有为空
+                console.log(array);//Array(8) [ 1, 2, 3, "a", "s", "d", 4, 5 ],改变了原数组
+
+            4.使用中括号和下标值，给数组添加值（或替换值）
+              var array=[1,2,3,4,5];
+                array[5]="a";
+                array[10]=10;//如果直接给它的下标10设置值，那么从原数组最后一个下标到下标10中间的值是空
+                console.log(array);//Array(6) [ 1, 2, 3, 4, 5, "a" ]
+           
+            5.concat():把传递的所有参数按顺序添加到数组尾部
+                 var array=[1,2,3,4,5];
+                //var re=array.concat(6,7,8);//返回一个新数组（添加了值的数组）
+                //var re=array.concat([6,7,8]);//Array(8) [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+                var re=array.concat([6,7,[8,9]]);//Array(8) [ 1, 2, 3, 4, 5, 6, 7, (2) […] ]不是一维数组就不会打散
+                console.log(re);
+                console.log(array);//Array(5) [ 1, 2, 3, 4, 5 ]，原数组不会改变
+            
+       */
+        
+       //1.push():给数组尾部添加值，如果是参数会被concat打散放到尾部，不过仅仅对于一维数组，其它数组不行
+      /*  var array=[1,2,3,4,5]
+       console.log(array.push("a","b"));//返回的是添加元素之后数组的值
+       console.log(array);//Array(7) [ 1, 2, 3, 4, 5, "a", "b" ],改变了原数组 */
+
+       //2..unshift():给数组头部（可以是一个或多个）添加值
+      /*  var array=[1,2,3,4,5];
+       console.log(array.unshift("a","b","c"));//返回的是添加元素之后数组的值
+       console.log(array);//Array(8) [ "a", "b", "c", 1, 2, 3, 4, 5 ],改变了原数组 */
+       
+       //3.splice()：
+      /*  var array=[1,2,3,4,5];
+       var re=array.splice(3,0,"a","s","d");
+       console.log(re);//返回的是删除的值，Array []但是我没删所有为空
+       console.log(array);//Array(8) [ 1, 2, 3, "a", "s", "d", 4, 5 ],改变了原数组 */
+
+       //4.使用中括号和下标值
+      /*  var array=[1,2,3,4,5];
+       array[5]="a";
+       array[10]=10;//如果直接给它的下标10设置值，那么从原数组最后一个下标到下标10中间的值是空
+       console.log(array);//Array(6) [ 1, 2, 3, 4, 5, "a" ]*/
+
+       //5.concat():
+       var array=[1,2,3,4,5];
+       //var re=array.concat(6,7,8);//返回一个新数组（添加了值的数组）
+       //var re=array.concat([6,7,8]);//Array(8) [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+       var re=array.concat([6,7,[8,9]]);//Array(8) [ 1, 2, 3, 4, 5, 6, 7, (2) […] ]不是一维数组就不会打散
+       console.log(re);
+       console.log(array);//Array(5) [ 1, 2, 3, 4, 5 ]，原数组不会改变
+       
+
+    </script> 
+</body>
+</html>

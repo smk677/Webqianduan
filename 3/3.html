@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title></title>
+       <meta charset="utf-8"/>
+       <style>
+          div{
+              position: relative;
+              display: inline-block;
+              border: 30px solid blue;
+              border-radius: 30px;
+              border-right:30px solid transparent;
+          }
+          div::after{
+              position: absolute;
+              top:-22px;
+              left:-8px;
+              content: "";
+              border: 6px solid green;
+              border-radius: 10px;
+              
+          }
+       </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

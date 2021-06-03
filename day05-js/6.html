@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        创建对象：
+          1.字面量创建
+             var obj={}
+          2.实例化创建
+           var obj=new Object();
+        对象的属性名是字符串
+        */
+       //1.用字面量创建对象时，可以直接书写属性，创建对象之后，也可以直接给对象添加
+    /*    var obj={
+           name:"sdadads",
+           sex:"nan"
+       }
+       obj.sd="kkkk"
+        var re=obj.name;
+        console.log(re); */
+
+        //2.用字面量创建对象时，不能直接书写属性，但是建对象之后，可以直接给对象添加
+        /* var obj=new Object();
+        obj.name="kkkk"
+        console.log(obj);*/
+
+/* 
+        点操作符：
+                - 成员访问
+                - 当.去获取一个对象的属性的时候，点后边跟的也是一个字符串，只不过必须省略了引号
+                - 点操作符可以访问对象的属性，但是一些特殊的属性无法进行获取（key是不规则字符串，key是一个变量）
+
+            中括号操作符：
+                - 获取对象的属性，但是是通用万能的
+                - 中括号可以进行运算，也可以解析变量，也可以直接书写字符串
+
+            使用规范：
+                - 一般情况下使用点操作符
+                - 点操作符不能使用，则使用中括号操作符 */
+    </script> 
+</body>
+</html>

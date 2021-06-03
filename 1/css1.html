@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        /* 
+            div>strong表示div的儿子是strong
+         */
+          div>strong{
+              color: red;
+          }
+          div p strong{
+              color: seagreen;
+          }
+          /* 
+          p.red表示即是p标签有是.red类选择器,这种被称为交集选择器
+           */
+          p.red{
+              color: red;
+          }
+          /* 
+          sapn,.sss表示span标签和.sss类选择器，这种被称为并集选择器，用逗号隔开，”，“的意思是和什么什么
+           */
+          span,.sss{
+              color: beige;
+          }
+
+          #abq a{
+             color: rgb(151, 150, 148);
+          }
+          #colr{
+            color: red;
+          }
+          #blk{
+              color: black;
+          }
+        </style>
+    </head>
+    <body>
+        <div>
+            <strong>儿子</strong>
+            <strong>儿子</strong>
+            <strong>儿子</strong>
+        </div>
+        <div>
+            <p>
+                <strong>孙子</strong>
+                <strong>孙子</strong>
+                <strong>孙子</strong>
+            </p>
+        </div>
+        <!-- -------------------- -->
+
+        <p class="red">
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+        </p>
+        <p>
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+        </p>
+        <p class="sss">
+            <strong>散打</strong>
+            <strong>s十大</strong>
+            <strong>冯绍峰</strong>
+        </p>
+        <span>
+            <strong>发的粉丝的</strong>
+            <strong>刚到宿舍</strong>
+            <strong>都是高手</strong>
+        </span>
+
+        <!-- ----------- -->
+        <ul id="abq">
+            <li><a href="#">公司首页</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司产品</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+       <span id="blk">左侧导航栏</span><br/>
+       <a href="#" id="colr">登陆</a>
+    </body>
+</html>

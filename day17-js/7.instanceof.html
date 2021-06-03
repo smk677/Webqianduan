@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          A instanceof B:
+              判断B的显示原型是否在 A的原型链上，如果在 返回true，不在则返回false
+        */
+       function fn(){
+
+       }
+       var f=new fn();
+       
+       console.log(f instanceof fn);//true(f原型链：f-->fn构造函数的原型对象-->object构造函数的原型对象-->null),fn的显示原型是object
+       console.log(f instanceof Object);//true
+
+       console.log(Object instanceof Function);//true
+       console.log(Object instanceof Object);//true
+       console.log(Function  instanceof Object);//true
+       console.log(Function  instanceof Function );//true
+       console.log(Object  instanceof fn);//false
+
+       var F = function () {};
+        //给Object的原型对象扩展a方法
+        Object.prototype.a = function () {
+            console.log('a()')
+        };
+        //给Function原型对象扩展b方法
+        Function.prototype.b = function () {
+            console.log('b()')
+        };
+        //实例化F
+        var f = new F();
+        // f.a(); //f自身没有a，沿着原型链找到了Object.prototype的a
+        // f.b(); //b is not a function
+        F.a() //F-->Function.prototype-->Object.prototype-->null
+        F.b()
+    </script>
+</body>
+</html>

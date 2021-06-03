@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* 
+         1. 如果一个行内块状元素，里面没有行内元素，
+          那么该元素的基线就是其底部
+          .one{
+          display: inline-block;
+          border: solid 1px red;
+          width: 100px;
+          height:100px
+          }
+            span{
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                border:solid 1px red;
+            }
+      2.如果一个行内块状元素，里面有行内元素，
+          那么该元素的基线就是其元素里面最后一个行内元素的基线
+                 
+         */
+      .one{
+          display: inline-block;
+          border: solid 1px red;
+          width: 100px;
+          height:100px
+      }
+      span{
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          border:solid 1px red;
+      }
+    </style>
+</head>
+
+<body>
+    <div>
+       <div class="one"></div>
+       <span><!-- x-span<br/>x-span --></span>
+    </div>
+    <img src="imgs/20210331181808.jpg" alt="" title="这是上面注释2.的例子">
+    <img src="imgs/20210331182155.jpg" alt="" title="这是上面注释1.的例子">
+</body>
+
+</html>

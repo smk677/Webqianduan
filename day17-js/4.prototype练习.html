@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //给Array扩展一个去重的方法
+          //设计目标：返回去重后的数组，不影响原数组
+          Array.prototype.qc=function(ary){
+            var newArray=[];
+            array.forEach(function(item,index){
+                if(newArray.indexOf(item)=== -1){
+                    newArray.push(item);
+                }
+            })
+            return newArray;
+        }
+          var array=[1,2,3,2,2,4,5,6,6];
+          var re=array.qc();
+          console.log(re);
+
+        //给String扩展一个去所有空格的方法
+        String.prototype.qkg=function(){
+            //this指向调用qkg方法的字符串
+           return  this.replace(/\s/gi,"");
+        }
+        var str=" 12 3 4567 ";
+       var r=str.qkg();
+        console.log(r);
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         截取数组的方法：
+           1.splice():
+              它的返回值是删除的值，所有可以用于截取数组；
+              如果参数2没写，默认到数组结尾
+              可以设置从哪里开始截取，截多长
+              如果第1个参数为负值,则按绝对值从数组右侧开始向左侧定位。如果第2个参数为负值,则被视为0。
+
+           2.slice():
+               它的返回值是一个数组，所有可以用于截取数组；
+              参数2也是代表下标，如果参数2没写，默认到数组结尾
+              可以设置从哪里开始截取，截到哪（不包含结束位置）
+              如果第1个参数为负值,从数组右侧开始向左侧定位。如果第2个参数为负值,则被视为0。
+              不改变数组
+        */
+       //1.splice():
+      /*  var array=[1,2,3,4,5,6,7]
+       console.log(array.splice(3,4)); */
+       
+       //2.slice():跟splice类似
+      /*  var array=[1,2,3,4,5,6,7]
+       //var re=array.slice(1,4);//从下标为1的值开始截，往后截4位但不包括结束位置
+       //console.log(re);//Array(3) [ 2, 3, 4 ]
+       //console.log(array);//不改变数组
+       var re=array.slice(-3,3);//[],截不到不能冲后面往前面截
+       console.log(re);//
+       console.log(array);//不改变数组 */
+
+      /*  var arr1 = [1,2,3,4,5,6,7,8];
+        console.log(arr1.slice(-3,6));//[6]
+        console.log(arr1.slice(-6,5));//[3,4]-6倒着数最后一个为-1，5正着数 */
+
+
+        /* 
+        数组倒序：
+          使用reverse方法，改变原数组，并返回了原数组的引用
+        */
+        var array=[1,2,3,4,5,6,7]
+        var re=array.reverse();//返回了原数组的引用
+        console.log(re);//Array(7) [ 7, 6, 5, 4, 3, 2, 1 ]
+        console.log(array);//Array(7) [ 7, 6, 5, 4, 3, 2, 1 ]
+
+        console.log(re===array);//true(使用的是同一个对象，以为地址一样)
+    </script>
+</body>
+</html>

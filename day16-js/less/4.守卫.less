@@ -1,0 +1,17 @@
+.minx(@q){
+//   无守卫 
+ height:100px;
+}
+.minx(@q) when (@q>10){
+    background-color: aqua;
+    height:200px;
+}
+.minx(@q) when (@q<=10),(@q>=50){
+    background-color: rosybrown;
+    height:300px;
+}
+
+#out{
+    border:1px solid black;
+    .minx(25);
+}

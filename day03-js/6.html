@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+       <!--  请输入成绩：<input type="text" id="put">
+        <button id="btn">检测</button>
+        <p>等级：<span id="el"></span></p> -->
+
+      <!--   请输入月份：<input type="text" id="put">
+        <button id="btn">提交</button>
+        <p>月份：<span id="el"></span></p> -->
+        <script>
+          /* 
+          声明语句有三种：声明变量、声明函数、声明标签
+           */
+           //1.声明变量
+          /*    var a=11; */
+           //2.声明函数
+            /* function(){
+
+            } */
+           //3.声明标签：label
+           //一般配合continue和break使用
+           //for1:就是我取的声明标签名
+          /*  for1:
+           for(var i=0; i<10;i++){
+              
+            for(var j=0;j<10;j++){
+               break for1;
+            }
+           }
+           document.write(i+"&nbsp;&nbsp;"+j); */
+
+           /* 
+            调试语句：
+             debugger用于停止js;
+             debugger可以放在脚本的任意位置,不会删除任何东西和关闭任何东西，类似于断点
+           */
+               
+          /*  for(var j=0;j<10;j++){
+               debugger;
+               console.log(j);
+            } */
+
+            /* 
+            判断语句：
+            1.单分支：
+            if(判断式){
+                代码块
+            }
+            如果判断式为true，执行代码块，反之不进入代码块
+            2.双分支：
+            if(判断式){
+                代码块
+            }else{
+                代码块
+            }
+            3多分支：
+            if(判断式){
+                代码块
+            }else if(判断式){
+                代码块
+            }.........
+            */
+            //a和b谁大输出谁
+           /*  var a=6,b=4;
+            if(a>b){
+                alert('a'+"大于b");
+            }else{
+                alert('b'+"大于a");
+            } */
+            
+            //if练习
+            //用户输入成绩，然后弹出成就的等级
+           /*  var oPut=document.getElementById("put");
+            var oBtn=document.getElementById("btn");
+            var oEl=document.getElementById("el");
+            oBtn.onclick= function(){
+               var yh=Number(oPut.value);
+               console.log(yh);
+               if(isNaN(yh)){
+                alert("请输入正确的数值");
+               }else if(yh>=90){ */
+              /*   alert("S"); */
+              //oEl.innerHTML另它读取的值显示为S
+              /*   oEl.innerHTML="S";
+               }else if(yh>=80){
+                alert("A");
+                oEl.innerHTML="A";
+               }else if(yh>=70){
+                alert("B");
+                oEl.innerHTML="B";
+               }else if(yh>=60){
+                alert("C");
+                oEl.innerHTML="C";
+               }else {
+                alert("D，不及格啊兄弟");
+               }
+            } */
+
+            /* 
+            Switch语句：专门用来设计多分支的，相比else if跟加简洁
+            */
+          /*   var oPut=document.getElementById("put");
+            var oBtn=document.getElementById("btn");
+            var oEl=document.getElementById("el");
+            oBtn.onclick= function(){
+                var yh=Number(oPut.value);
+                if(yh>=1 && yh<=12){
+                    switch(yh){
+                     case 1:
+                     oEl.innerHTML="1月份";
+                     break; 
+                     case 2:
+                     oEl.innerHTML="2月份";
+                     break;   
+                     case 3:
+                     oEl.innerHTML="3月份";
+                     break;   
+                     case 4:
+                     oEl.innerHTML="4月份";
+                     break;   
+                     case 5:
+                     oEl.innerHTML="5月份";
+                     break;      
+                     case 6:
+                     oEl.innerHTML="6月份";
+                     break;   
+                     case 7:
+                     oEl.innerHTML="7月份";
+                     break;   
+                     case 8:
+                     oEl.innerHTML="8月份";
+                     break;   
+                     case 9:
+                     oEl.innerHTML="9月份";
+                     break;   
+                     case 10:
+                     oEl.innerHTML="10月份";
+                     break;   
+                     case 11:
+                     oEl.innerHTML="11月份";
+                     break;   
+                     default:
+                     oEl.innerHTML="12月份";
+                 }
+                }else{
+                    alert("请输入正确月份！！！！");
+                }
+                 
+            } */
+
+        </script>
+    </body>
+</html>

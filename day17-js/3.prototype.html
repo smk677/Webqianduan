@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          prototype:
+            1.prototype是一个指针，指向原型对象，也被称为显示原型
+            2.每一个函数都有prototype属性
+            3.当函数被实例化后，如果实例化对象调用它的某个属性和方法，而实例化对象没有这个属性和方法，就会找到这个构造函数的原型对象
+            4.只有构造函数的prototype才有意义，其它函数的prototype没用
+            5.原型对象默认是空的(constructor属性除外)
+        */
+        
+        console.log(Array.prototype);//原型对象默认是空的(constructor属性除外),Array []
+        console.log(fn.prototype);//Object { … }
+        //构造函数
+       function fn(){
+
+       }
+       //给构造函数的原型对象添加属性或方法
+       fn.prototype.hello=function(){
+           console.log("hello world");
+       }
+       //实例化函数
+       var a=new fn();
+       //实例化对象没有这个方法，所以找到构造函数的原型对象
+       a.hello();
+
+    </script>
+</body>
+</html>

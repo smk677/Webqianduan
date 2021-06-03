@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+          .farther{
+              width: 200px;
+              height:200px;
+              background: paleturquoise;
+              /* 
+              加了浮动后，相当于元素类型转换成了inline-block
+               */
+              float: left;
+          }
+          .son{
+              width: 300px;
+              height: 300px;
+              background: rebeccapurple;
+          }
+          /* ------------------------------- */
+          .pink{
+            width: 200px;
+            height:200px;
+            background: pink;
+            float: left;
+          }
+          .rebec{
+            width: 200px;
+            height:200px;
+            background:rebeccapurple;
+            float: left;
+          }
+          .blue{
+            width: 200px;
+            height:200px;
+            background:blue;
+            float: left;
+          }
+        </style>
+    </head>
+    <body>
+      <div class="farther"></div>
+      <div class="son"></div>
+
+      <!-- -------------------- -->
+      <div class="pink"></div>
+      <div class="rebec"></div>
+      <div class="blue"></div>
+    </body>
+</html>

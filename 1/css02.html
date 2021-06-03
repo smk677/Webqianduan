@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        body{
+            /* font-size:0; */
+        }
+            span{
+                /* 
+                运行时，换行和空格浏览器会认为这是一个字符
+                所以给它添加背景颜色时会出现空白的部分
+                解决方法：
+                  1.给最外层设置字符大小为0
+                  font-size:0;
+                  2.给它设置浮动
+                  float:left;
+                  3.把他们写在一起，不要有空格和换行
+                   <span class="blue">G</span><span class="red">o</span>
+                */
+                font-size: 150px;
+                background-color: black;
+                /* float: left; */
+            }
+           .blue{
+               color: blue;
+           }      
+           .red{
+               color: red;
+           }     
+           .yellow{
+               color: yellow;
+           }
+           .green{
+               color: green;
+           }
+        </style>
+    </head>
+    <body>
+       <span class="blue">G</span>
+       <span class="red">o</span>
+       <span class="yellow">o</span>
+       <span class="blue">g</span>
+       <span class="green">l</span>
+       <span class="red">e</span>
+    </body>
+</html>

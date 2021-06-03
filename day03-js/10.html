@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+      
+        <script>
+            //求整数1～100的累加值，但要求碰到个位为3的数则停止累加
+              var count=0;
+              for(var i=1;i<=100;i++){
+                  if(i%10==3){
+                    continue;
+                  }else{
+                    count+=i;
+                  }
+              }
+              document.write(count);
+            
+            //求整数1～100的累加值，但要求跳过所有个位为3的数
+           
+            //求1-100之间不能被7整除的整数的和（用continue）
+
+            //求200-300之间所有的奇数的和（用continue）
+
+            //求200-300之间第一个能被7整数的数（break）
+        </script>
+    </body>
+</html>

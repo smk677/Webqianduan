@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*   使用一个数组 保存50长度的斐波那契数列值
+            斐波那契数列前两个值是0 和 1 
+            0 1 1 2 3 5 8 13 21 34      
+      */
+     var arr=[0,1]
+       for(var i=2;i<50;i++){
+         arr[i]=arr[i-1]+arr[i-2];
+       }
+       console.log(arr);
+
+       /* 
+       数组的长度：
+         使用数组.length方法
+       */
+      var array=[1,2,3, ,4,4,4,4,4]
+      alert(array.length);
+
+      //给数组没这么长，给它赋值一个大于它长度的值，后面默认为空（值）
+      array.length=100;
+      console.log(array);
+
+      //给数组的长度赋值一个小于它长度的值，大于这个长度的值会被裁剪掉，就算你后面在给它赋值一个大于它长度的值，大于原本长度之后的值是空
+       array.length=3;//Array(3) [ 1, 2, 3 ]
+      console.log(array);
+
+      array.length=50;
+      console.log(array);//Array(50) [ 1, 2, 3, <7 empty slots>, … ]
+
+    
+        //尝试删除数组的length属性,删除失败返回false
+        console.log(delete arr.length)
+        console.log(arr)
+    </script>
+</body>
+</html>

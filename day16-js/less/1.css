@@ -1,0 +1,48 @@
+/* .clear(){
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+} */
+/* .clear(@w: 400px, @h:400px, @c: cadetblue) {
+    width: @w;
+    height: @h;
+    background-color: @c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+} */
+#out {
+  width: 400px;
+  background-color: cadetblue;
+  *zoom: 1;
+  /*  position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         margin: auto; */
+}
+#out::after {
+  content: "\200B";
+  height: 0;
+  display: block;
+  clear: both;
+}
+#out #box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  float: left;
+  /*   position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         margin: auto; */
+}

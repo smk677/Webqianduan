@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- 
+            null出现的情况
+            1.在前面设置变量为null,在未来使用，再重新进行赋值：
+                var a=null;
+                a="sdadasd"
+               document.write(a);
+            2.在调用函数，进行参数赋值时，有不想告诉的内容，给其中一个参数设置为null
+                function test(name,age,sex){
+                            document.write("姓名："+name+"</br>");
+                            document.write("年龄："+age+"</br>");
+                            document.write("性别："+sex+"</br>");
+                        }
+                        //给函数的参数赋值时，必须按照参数的顺序进行赋值
+                        test("倒萨大大",54,"男");
+                        test("倒萨大大",null,"男");
+            3.设置一个对象时，没有一个变量引用它，那么这个对象就不可能在被使用，其自我认为没用，达到清除占用内存的效果
+             var duix={
+
+                }  
+                document.write(duix);
+         -->
+        <script>
+        //1.
+         /*   var a=null;
+           a="sdadasd"
+           document.write(a); */
+        //2.
+         /*  function test(name,age,sex){
+              document.write("姓名："+name+"</br>");
+              document.write("年龄："+age+"</br>");
+              document.write("性别："+sex+"</br>");
+          }
+          //给函数的参数赋值时，必须按照参数的顺序进行赋值
+          test("倒萨大大",54,"男");
+          test("倒萨大大",null,"男"); */
+        //3.
+       /*  var duix={
+
+        }  
+        console.log(duix); */
+        </script> 
+    </body>
+</html>

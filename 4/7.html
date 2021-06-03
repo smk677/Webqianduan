@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+      ul{
+            margin: 0px;
+            padding: 0px;
+            list-style-type:none;
+        }
+        ul#father{
+            border: 1px solid red;
+        }
+        ul#father li{
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+        ul#father::after{
+            content: "";
+            display:block;
+            clear: both;
+        }
+        ul#father  li ul{
+           /*  display: none; */
+            border: 1px solid black;
+        }
+        ul#father  li ul li{
+           /*  line-height: 0px; */
+            border: 0px;
+        }
+	</style>
+</head>
+
+<body>
+	  <ul id="father">
+          <li>
+              <a href="#">菜单1</a>
+              <ul>
+                  <li>菜单1-1</li>
+                  <li>菜单1-2</li>
+              </ul>
+          </li>
+          <li>
+            <a href="#">菜单2</a>
+            <ul>
+                <li>菜单2-1</li>
+                <li>菜单2-2</li>
+                <li>菜单2-3</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">菜单3</a>
+            <ul>
+                <li>菜单3-1</li>
+                <li>菜单3-2</li>
+            </ul>
+        </li>
+      </ul>
+</body>
+
+</html>  

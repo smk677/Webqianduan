@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./font/iconfont.css" type="text/css" rel="stylesheet" />
+    <style>
+         #shaizi{
+             width: 400px;
+             height: 250px;
+             border: 1px solid green;
+             /* display:flex;弹性布局 */
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: space-between;
+             align-items: center;
+         }
+         #shaizi>div{
+             display: flex;
+             width: 100px;
+             height: 100px;
+             border: 1px solid black;
+             justify-content:center;
+             align-items: center;
+             position: relative;
+         }
+         #shaizi>div >div{
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:first-child::after{
+             content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(red 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(2)::before{
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-left: -15px;
+             margin-top: 5px;
+             content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(2)::after{
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-left: -15px;
+             margin-top: -35px;
+             content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(3)::before{
+            position: absolute;
+             top: 5px;
+             left: 5px;
+             /* margin-left: -15px;
+             margin-top: -35px; */
+            content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(3)::after{
+            position: absolute;
+             bottom: 5px;
+             right: 5px;
+            content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(3)>div{
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(blue 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(4)>div:first-child{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(red 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(4)>div:last-child{
+             position: absolute;
+             bottom: 10px;
+             right: 10px;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(red 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(4)::before{
+            position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-left: -40px;
+             margin-top: 10px;
+             /* margin-left: -15px;
+             margin-top: -35px; */
+            content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(red 0%, black 80%,transparent 100%);
+         }
+         #shaizi>div:nth-of-type(4)::after{
+            position: absolute;
+             top: 50%;
+             left: 50%;
+             margin-left:10px;
+             margin-top:-40px;
+             content: "";
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             background-image: radial-gradient(red 0%, black 80%,transparent 100%);
+         }
+    </style>
+</head>
+
+<body>
+    <div id="shaizi">
+        <div></div>
+        <div></div>
+        <div>
+            <div></div>
+        </div>
+        <div>  
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>

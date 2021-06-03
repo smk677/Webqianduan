@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        判断数据类型:
+          typeof:
+           能够检测的类型有：number string boolean function 
+                            undefined bigint symbol
+
+          ===:(全等)
+             能够检测  null 和 undefined   
+             因为null和undefined只有一个值就是他们自身，所以全等判断只要类型相等，则值一定相等
+
+          object.toString():
+             object的toString方法返回的是字符串中拥有的当前数据类型，所以我们可以让其它类型调用object的toString方法   
+
+         Object.prototype.toString.call(value).slice(8, -1).toLowerCase();
+        */
+       //让其他类型调用object.toString方法
+         //1.要拿到object.toString方法 Object.prototype.toString(所有的方法都在当前构造函数的原型对象上)
+         //  Object.prototype.toString()
+         //2.改变toString的this指向，指向你要检测的类型 call方法就是改变一个函数的this指向
+         var re = Object.prototype.toString.call([]).slice(8,-1);
+        //  var re = Object.prototype.toString.call(1);
+        //  var re = Object.prototype.toString.call(function () {});
+        //  var re = Object.prototype.toString.call(null);
+        //  var re = Object.prototype.toString.call(undefined);
+        //  var re = Object.prototype.toString.call(false);
+        //  var re = Object.prototype.toString.call("123");
+        //  var re = Object.prototype.toString.call(new Date());
+        //  var re = Object.prototype.toString.call(/\s/gi);
+        //  var re = Object.prototype.toString.call(Symbol());
+        //  var re = Object.prototype.toString.call(1n);
+        //  console.log(re.slice(8,-1));
+        console.log(re)
+
+        //封装检测的类型
+        function fn(value){
+           return Object.prototype.toString.call(value).slice(8,-1);
+        }
+        var re=fn(null);
+        console.log(re);
+
+        /* 
+         释放内存：
+           1.当函数调用之后，函数内部的数据会保存在内存中（局部变量和局部方法），当执行完之后，确定后面再也不会用这个函数，使它数据自动销毁，内存直接释放
+           2.全局变量只有在页面的关闭的时候才能销毁，除非手动销毁
+           3.把变量设置为null，当一个对象不再被引用的时候，就变成了垃圾对象，会等待回收
+
+           */
+           function fn1() {
+            var a = 1;
+            var b = 2;
+            console.log(a,b)
+        }
+          fn1();//函数调用之后，内部数据会占用内存
+          console.log(fn1)
+          //如果以后再也不使用fn，则可以把fn销毁
+          fn1=null;
+    </script>
+</body>
+</html>

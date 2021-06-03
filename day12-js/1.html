@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         navigator对象：
+            储存了与浏览器相关的基本信息，如:名称，版本，系统类型等
+
+            通过window.navigator引用该对象，并利用它的属性来读取客户端的基本信息  
+            onLine:判读是否有网络
+            userAgent:客户端识别码（用户代理字符串）
+            platform:操作系统
+        */
+      console.log(window.navigator.onLine);
+      console.log(navigator.onLine);
+      console.log(window.navigator.userAgent);
+      console.log(window.navigator.platform);
+
+      //不同浏览器的兼容方法1：浏览器检测法，根据浏览器的结果 执行对应操作
+      /* var ua = navigator.userAgent.toLowerCase();
+        var info = {
+            ie: /msie/.test(ua) && !/opera/.test(ua),
+            op: /opera/.test(ua),
+            sa: /version.*safari/.test(ua),
+            ch: /chrome/.test(ua),
+            ff: /gecko/.test(ua) && !/webkit/.test(ua)
+        }
+        info.ie && console.log("ie");
+        info.op && console.log("op");
+        info.sa && console.log("sa");
+        info.ch && console.log("ch");
+        info.ff && console.log("ff"); */
+        
+        //不同浏览器的兼容方法2：特征检测法
+       /*  if(Element.lastElementChild){
+           console.log(Element.lastElementChild);
+        }else{
+            console.log(Element.lastChild);
+        } */
+       
+        //操作系统的检测
+        //如果是window操作系统返回true
+        var Win=(navigator.userAgent.indexOf("Win")!==-1)
+        //如果是Macintosh系统返回true
+        var Mac=(navigator.userAgent.indexOf("Mac")!==-1)
+        //如果是Nuxi系统返回true
+        var Unxi=(navigator.userAgent.indexOf("Xll")!==-1)
+        // 如果是Linux系统， xc则返回true
+        var isLinux = (navigator.userAgent.indexOf("Linux") != -1);
+        
+    </script>
+</body>
+</html>

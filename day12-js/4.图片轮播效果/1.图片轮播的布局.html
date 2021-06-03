@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #father{
+            width: 300px;
+            height: 500px;
+            position: relative;
+        }
+        #pho{
+            overflow-x: scroll;
+            display: flex;
+          
+        }
+        #pho img{
+            width: 300px;
+            height: 500px;
+        }
+        .left,.right{
+            width: 30px;
+            height:30px;
+            line-height:30px;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            background-color: cornflowerblue;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+        }
+        .left{
+            left: 5px;
+        }
+        .right{
+            right: 5px;
+        }
+        #radi{
+            margin: 0px;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #radi li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #959CA3;
+            margin: 0px 2px;
+        }
+        #radi li.active{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <div id="pho">
+            <img src="../image/01.jpg">
+            <img src="../image/02.jpg">
+            <img src="../image/03.jpg">
+            <img src="../image/04.jpg">
+            <img src="../image/05.jpg">
+        </div>
+        <p class="left">&lt;</p>
+        <p class="right">&gt;</p>
+         <ul id="radi">
+             <li class="active"></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+       </div>
+</body>
+</html>

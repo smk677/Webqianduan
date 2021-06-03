@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        基本包装类型：
+                每当读取一个基本类型值的时候，后台就会创建一个对应的基本包装类型的对象，从而让我们能够调用一些方法来操作这些数据
+
+                基本包装类型有：string   number  boolean
+        */
+       var sk="abcdef";
+        var re=sk.toUpperCase();
+       console.log(re);
+         /*  
+          //当使用一个基本类型的属性的时候，后台会自动生成它的包装对象
+          var _sk=new String(sk);
+          //通过包装的对象，可以使用对应的属性
+          re=_sk.toUpperCase();
+          //结束之后，会把它的包装对象删除
+          _sk=null;
+        */
+
+        var sk="abcdef";
+      /*   sk.qq="122313"; */
+        var sk1=new String();
+        sk1.qq="12333333";
+        console.log(sk1);//String { "" }
+                         //length: 0
+                        // qq: "12333333"
+        /* 
+            为什么不能给基本类型扩展属性和方法：
+                要给基本类型扩展属性就必须创建与其对应的包装对象
+                var _sk=new String(sk);
+                给包装对象添加属性
+                _stk.qq = "122313";
+                运行结束后删除这个包装对象
+                _sk= null;
+    
+        */
+    </script>
+</body>
+</html>

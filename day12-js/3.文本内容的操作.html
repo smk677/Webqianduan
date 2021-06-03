@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="dij">点击</button>
+    <div id="box">
+        <p>hello p</p>
+    </div>
+    <script>
+        /* 
+        innertHTML:获取或设置元素的内容， 设置的时候可以解析标签， 获取的时候可以获取标签
+        innertText:获取或设置元素的内容，设置的时候不可以解析标签， 获取的时候不可以获取标签
+
+        outerHTML：获取或设置元素的内容，和innertHTML类似，但是包含当前元素
+        outerText：获取或设置元素的内容，和innertText类似，但是包含当前元素
+
+        textContent:和innerText类似，在没有标签的情况下推荐使用
+        */
+     var oBox=document.getElementById("box");
+     var oDij=document.getElementById("dij");
+     oDij.onclick=function(){
+        // console.log(oBox.innerHTML);//<p>hello p</p>
+        //console.log(oBox.innerText);//hello p
+        //oBox.innerHTML="<a>hello a</a>";//设置的时候解析标签
+        //oBox.innerText="<a>hello a</a>";//设置的时候不解析标签
+        //console.log(oBox.outerHTML);//包含当前元素 
+                                                /* <div id="box">
+                                                    <p>hello p</p>
+                                                  </div */
+        //oBox.outerHTML="<a>hello a</a>"
+        // console.log(oBox.outerText);//undefined
+        //oBox.outerText="<a>hello a</a>"
+        
+        // console.log(oBox.textContent);//hello p
+        // oBox.textContent="<a>hello a</a>";//不解析标签
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            //使用for 把1-100的整数以二维的形式储存在数组中
+            [
+                [0..9],
+                [11....20],
+                [21.....30],
+                ....
+                [91....100]
+            ]
+        
+        */
+       //主数组
+       var array=[];
+       for(var i=0;i<10;i++){
+           //主数组里面的数组
+           var newArray=[]
+            for(var j=0;j<10;j++){
+                newArray[j]=i*10+j;
+            }
+            array[i]=newArray;
+       }
+       console.log(array);
+    </script>
+</body>
+</html>

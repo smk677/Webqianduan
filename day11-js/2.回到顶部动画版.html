@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+      body{
+        height: 3000px;
+      }
+      #box{
+         width: 200px;
+         height: 100px;
+         line-height: 100px;
+         border-radius: 50%;
+         background-color: bisque;
+         font-size: 20px;
+         font-weight: bold;
+         position: fixed;
+         bottom: 50px;
+         right: 20px;
+         text-align: center;
+      }
+  </style>
+<body>
+    <div id="box">回到顶部</div>
+    <script>
+      var oBox=document.getElementById("box");
+      var timer=null;
+      oBox.onclick=function(){
+        var newScroll=window.pageYOffset;
+        timer=setInterval(function(){
+           
+        },10);
+      }
+    </script>
+</body>
+</html>

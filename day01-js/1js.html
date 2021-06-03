@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title></title>
+          <!-- js要写在script里面 -->
+          <script type="text/javascript">
+            /* 弹窗（警示框）:
+                 alert(); 一般用来纠错
+                 一个语句的结束以分号（;）结束
+            */
+           /*  alert("hello world"); */
+            /* console.log（）控制台打印 */
+         /*    console.log("大撒旦"); *///一般用来纠错
+            /* 
+            document.write();文档输出（页面）
+            当文档内容加载完成后，再写入一个内容，输出的时候可能会覆盖前面输出的内容
+            */
+          /*  document.write("撒大大大"); *///一般用来纠错
+          </script>
+    </head>
+    <body>
+        <div id="test"></div>
+        <!-- 外部引入 -->
+        <script src="./index.js">
+        /* 外部引入之后，在里面写入的东西无效 */
+          // document.write("sdadada");
+        </script>
+        <script >
+            /* 
+             设置一个变量re用来储存通过id名获得的指定对象div
+             var变量关键字  re变量名  =后面的是数据
+            */
+            /* var re=document.getElementById("test");
+            console.log(re); *///控制台打印输出
+        </script>
+    </body>
+</html>

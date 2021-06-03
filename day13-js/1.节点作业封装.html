@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <ul class="box">
+        <li>1 <a href="###">XX</a></li>
+        <li>2 <a href="###">XX</a></li>
+        <li>3 <a href="###">XX</a></li>
+        <li>4 <a href="###">XX</a></li>
+    </ul>
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oBox = document.querySelector('.box');
+        var oLis = document.querySelectorAll('.box li');
+        var oDele = document.querySelectorAll('.box li a');
+
+        //封装一个在元素内部的最上边插入beforeChild
+        function beforeChild(parent,child) {
+            //获取里面的第一个子节点
+            var firstOne=parent.firstElementChild;
+            console.log(firstOne)
+
+            //如果获取的第一个子节点是true（存在）
+            if(firstOne){
+                //就把他插入第一个子节点的上边
+                parent.insertBefore(child,firstOne);
+            }else{
+                //否则第一个子节点不存在（没有元素），直接把他插入
+                parent.appendChild(firstOne);
+            }
+        }
+       // beforeChild(oBox,oLis[0]);//里面自己定义
+      
+
+        //封装一个在兄弟元素后边插入一个元素的方法 insertAfter
+        function insertAfter(nextLi,oldT) {
+            //通过oldT获取下一个兄弟元素
+            var lastOne=oldT.nextElemeneSibling;
+            //判断下一个子节点是否存在
+            if(lastOne){
+                lastOne.parentNode.insertBefore(oldT,newLi);
+            }else {
+                oldT.parentNode.appendChild(newLi)
+            }
+           
+        }
+       // insertAfter(newLi,oldLi);
+    </script>
+</body>
+</html>

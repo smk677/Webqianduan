@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="./appleHeader/iconfont.css" type="text/css" rel="stylesheet" />
+      <style>
+          #meau{
+              margin: 0px;
+              padding: 0px;
+              width: 100%;
+              height:40px;
+          }
+       
+          #meau ul{
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            height:40px;
+            line-height: 40px;
+            background-color: black;
+          }
+          #meau ul li{
+              text-align: center;
+              color: #fff;
+              font-size:25px;
+          }
+          #meau ul li:first-child{
+              text-align: left;
+             flex-grow: 1;
+             padding-left: 10px;
+          }
+          #meau ul li:nth-of-type(2){
+            flex-grow:2;
+          }
+          #meau ul li:nth-of-type(3),li:nth-of-type(4),
+          li:nth-of-type(5),li:nth-of-type(6),
+          li:nth-of-type(7),li:nth-of-type(8),li:nth-of-type(9){
+              display: none;
+          }
+          #meau ul li:last-child{
+              text-align: right;
+              flex-grow: 1;
+              padding-right: 10px;
+          }
+         
+          @media (min-width:768px){
+                #meau ul li{
+                    font-size: 14px;
+                }
+                #meau ul li:nth-of-type(3),li:nth-of-type(4),
+                li:nth-of-type(5),li:nth-of-type(6),
+                li:nth-of-type(7),li:nth-of-type(8),li:nth-of-type(9){
+                    display: block;
+                    flex-grow: 1;
+                }
+                #meau ul li:first-child{
+                    display: none;
+                }
+                #meau ul li:nth-of-type(2){
+                    text-align: left;
+                    padding-left: 20px;
+                    flex-grow:1.5;
+                    font-size: 25px;
+                }
+                #meau ul li:nth-of-type(9){
+                    font-size: 25px;
+                }
+                #meau ul li:last-child{
+                    flex-grow:1.5;
+                    font-size: 25px;
+                }
+          }
+      </style>
+    </head>
+    <body>
+        <div id="meau">
+            <ul>
+                <li class="iconfont">&#xe789;</li>
+                <li class="iconfont">&#xe63d;</li>
+                <li>Mac</li>
+                <li>iPad</li>
+                <li>iPhone</li>
+                <li>Watch</li>
+                <li>Music</li>
+                <li>技术支持</li>
+                <li class="iconfont">&#xe616;</li>
+                <li  class="iconfont">&#xe725;</li>
+            </ul>
+        </div>
+    </body>
+</html>

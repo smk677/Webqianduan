@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+       <label for="user"> 用户名：</label><input type="text" id="user"/><br/>
+       <label for="pwr"> 密码：</label><input type="password" id="pwr"/><br/>
+       <button type="submit" id="btn_s">登陆</button>
+       <script>
+           //获取元素
+           var oUser=document.getElementById("user");
+           var oPwr=document.getElementById("pwr");
+           var oBtn_s=document.getElementById("btn_s");
+            
+           //点击oBtn_s时,要进行的操作，用function函数封装起来
+           oBtn_s.onclick=function(){
+               //获取元素value值
+               var isU=oUser.value;
+               //Number强制转化为数值
+               var isP=Number(oPwr.value);
+               console.log(isU);
+               console.log(isP);
+                
+              /*  判断语句if,如果用户输入的值isU等于字符串lipeihua ,执行下面的if语句，否则不进入if语句，执行else语句
+              */
+               
+               if(isU==='lipeihua'){
+                   if(isP===123456){
+                       alert("登陆成功");
+                   }else{
+                    alert("密码输入错误");
+                   }
+               }else{
+                   alert("用户名输入错误");
+               }
+           }
+       </script>
+    </body>
+</html>

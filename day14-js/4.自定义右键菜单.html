@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 300px;
+            background-color: blueviolet;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>刷新</p>
+    </div>
+    <script>
+        var oBox=document.getElementById("box");
+        var l=0,t=0;
+
+        document.oncontextmenu=function(e){
+            //阻止默认事件
+            //e.preventDefault();
+
+            //右键显示元素
+            oBox.style.display="block";
+            //获取窗口宽高
+            var winWH={
+                x:document.documentElement.clientWidth,
+                y:document.documentElement.clientHeight
+            }
+           
+            console.log(winWH);
+            //获取元素到窗口边缘的距离
+            l=e.clientX;
+            t=e.clientY;
+
+           /*  oBox.style.left=l+"px";
+            oBox.style.top=t+"px";*/
+            //判断临界值
+            //l（横向距离）最大只能为窗口的宽度减去自身的宽度
+            if(l>=winWH.x-oBox.offsetWidth){
+               //如果大于或等于这个临界值时，让反向显示（减去自身的宽度（就是把鼠标右键的那个点往左走了它自身的宽度））
+               l-=oBox.offsetWidth;
+            }
+            if(t>=winWH.y-oBox.offsetHeight){
+               //如果大于或等于这个临界值时，让反向显示（减去自身的宽度（就是把鼠标右键的那个点往左走了它自身的宽度））
+               t-=oBox.offsetHeight;
+            }
+
+            oBox.style.left=l+"px";
+            oBox.style.top=t+"px";
+
+              //阻止默认事件
+              return false;
+        }
+
+        //刷新
+        var oReload=oBox.querySelector("p");
+        oReload.onclick=function(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

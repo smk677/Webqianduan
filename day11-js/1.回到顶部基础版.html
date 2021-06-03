@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+      /* body{
+        height: 3000px;
+      } */
+    /*   #box{
+         width: 200px;
+         height: 100px;
+         line-height: 100px;
+         border-radius: 50%;
+         background-color: bisque;
+         font-size: 20px;
+         font-weight: bold;
+         position: fixed;
+         bottom: 50px;
+         right: 20px;
+         text-align: center;
+         display: none;
+         padding:0 10px;
+         border: 1px solid red;
+      } */
+       
+       html{
+         padding: 10px 0px;
+       }
+      .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        /* overflow: scroll; */
+        /* padding: 0 10px; */
+      }
+   /*    .son{
+        width: 800px;
+        height: 800px;
+        background-color: blueviolet;
+        margin: 0px 10px;
+      } */
+  </style>
+<body>
+   <!--  <div id="box">回到顶部</div> -->
+    <div class="box">
+      <div class="son"></div>
+    </div>
+    <script>
+      /* var oBox=document.querySelector("#box");
+       
+      //给window对象创建一个滚动事件用于实时监听滚动
+       window.onscroll=function(){
+         //获取滚动位置
+        var newScroll=window.pageYOffset;
+
+        if(newScroll>=500){
+          oBox.style.display="block";
+        }else{
+          oBox.style.display="none";
+        }
+        oBox.onclick=function(){
+          window.scrollTo(0,0);
+          }
+      }
+        */
+
+       /* 
+         clientWidth:
+             获取元素的宽度，获取的是padding-box(padding-left和padding-right加上内容（content）的宽度)的宽度
+             当元素被display:none或者元素没有加载完成的时候，得到的是0
+       */
+     /*   var oBox=document.querySelector("#box");
+       console.log(oBox.clientWidth); */
+
+       /* 
+         offsetWidth:
+            获取元素的宽度，获取的是border-box(padding-left和padding-right加上内容（content）的宽度，再加上border（边框的宽度）)的宽度
+             当元素被display:none或者元素没有加载完成的时候，得到的是0
+       */
+      /*  var oBox=document.querySelector("#box");
+       console.log(oBox.offsetWidth); */
+
+       /* 
+        scrollWidth：
+            获取元素内包含的完全内容(包含元素的宽度加父元素的padding(右内边距会被覆盖)加上包含元素的外边距(右外边距会被覆盖))的宽度
+       */
+      /*  var oBox=document.querySelector(".box");
+       console.log(oBox.scrollWidth); */ 
+
+       /* 
+        获取窗口的大小：
+            根元素的clientWidth和clientHeight
+            IE6以上认为根元素是html
+            document.documentElement.clientWidth
+       */
+      /* 
+      console.log(document.documentElement.clientWidth);
+      console.log(document.documentElement.clientHeight);
+      var oHtm=document.documentElement;
+      console.log(oHtm.clientWidth); */
+
+      /* 
+       获取文档的大小：
+         根元素的offsetHeight
+         一般没有横向的滚动条，所以获取文档的一般都是高度(元素的高度加根元素的上下内边距加body的上下外边距)没有宽度
+      */
+    /*  var oHtm=document.documentElement;
+     console.log(oHtm.offsetHeight); */
+
+     /* 
+      offsetLeft：
+          获取元素的边框外侧到最近定位父级元素的边框内测的距离
+          如果一直没有定位父级，则直接获取元素到文档边缘
+     */
+
+     /* 
+      clientLeft:获取元素左边框的宽度
+      clientTop:获取元素上边框的宽度
+     */
+
+     /* 
+      scrollLeft:获取或设置滚动条的滚过的距离（横向滚动条位置）
+      scrollTop:获取或设置滚动条滚过的距离（竖滑滚动条位置）,使用最多
+     */
+    /* 
+     offsetParent:获取最近定位的父级元素
+    */
+
+     /* 
+       获取系统的滚动条：
+          获取html元素的scrollTop
+          window.pageYOffset/pageXOffset
+       设置系统的滚动条：
+          给html元素设置scrollTop
+          window.scrollTo(x,y)   
+     */
+    
+    </script>
+</body>
+</html>

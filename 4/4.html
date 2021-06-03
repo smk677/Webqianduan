@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+         div{
+             width: 100px;
+             height: 100px;
+             background-color: aquamarine;
+             /*2. 如果写在hover之前元素不会迅速反弹 */
+             transition-property: width;
+             transition-duration:1s;
+             transition-timing-function: linear;
+             /* 4.如果写在hover之前元素，就会延迟 */
+             transition-delay: 1s;
+         }
+         div:hover{
+             /*1. 这么写鼠标移开时会迅速反弹 */
+             width: 300px;
+             /* transition-property: width;
+             transition-duration:1s;
+             transition-timing-function: linear; */
+             /* 3.鼠标移上去延迟一秒,这样写就开始延迟一秒回弹时不会延迟 */
+             /* transition-delay: 1s; */
+         }
+	</style>
+</head>
+
+<body>
+	  <div> </div>
+</body>
+
+</html>  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+       .father{
+           position: relative;
+           border: 1px solid black;
+           width: 300px;
+       }
+       .father ul{
+           list-style-type:none;
+           margin: 0;
+           padding: 6px;
+       }
+       .father ul div{
+           display: none;
+           position: absolute;
+           width: 500px;
+           left: 300px;
+           top: -1px;
+           bottom: -1px;
+           border: 1px solid blue;
+           background-color: #fff;
+         
+       }
+       .father ul a{
+           text-decoration: none;
+           color: #333;
+       }
+       .father ul:hover div{
+          display:block;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <ul>
+            <li><a href="#">菜单1</a></li>
+            <div>菜单1-子菜单</div>
+        </ul>
+        <ul>
+            <li><a href="#">菜单2</a></li>
+            <div>菜单2-子菜单</div>
+        </ul>
+        <ul>
+            <li><a href="#">菜单3</a></li>
+            <div>菜单3-子菜单</div>
+        </ul>
+        <ul>
+            <li><a href="#">菜单4</a></li>
+            <div>菜单4-子菜单</div>
+        </ul>
+        <ul>
+            <li><a href="#">菜单5</a></li>
+            <div>菜单5-子菜单</div>
+        </ul>
+    </div>
+</body>
+</html>  

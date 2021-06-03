@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body> 
+        <input type="text" id="pint" autofocus>
+        <button type="submit" id="btn">按钮</button>
+        <script>
+           //通过元素id获取相应的元素并返回给变量
+           var oPint=document.getElementById("pint");
+           var oBtn=document.getElementById("btn");
+            
+         
+          //button的点击事件onclick,用函数function进行封装
+          oBtn.onclick= function(){
+              //获取元素用户输入的value值（oPint.value），返回给变量
+              var  isPint=oPint.value;
+              console.log(isPint);
+              //判断语句if,如果isPint是纯数字，返回false
+              if(isNaN(isPint)){
+                alert("非法输入");
+              }else{
+                  alert("输入正确");
+                  
+              }
+          }
+        </script>
+    </body>
+</html>

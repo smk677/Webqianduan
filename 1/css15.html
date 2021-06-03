@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #farther{
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;
+            border:solid 100px;
+            border-color: white white black black;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 2px black;
+        }
+        #father:before{
+            content: "";
+            position: absolute;
+            top: -85px;
+            left: -85px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 100%;
+        }
+        #father:after{
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: -14px;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 100%;
+        }
+     
+        </style>
+    </head>
+    <body>
+        <div id="farther">
+           <div class="son1"></div>
+           <div class="son2"></div>
+        </div>
+        </div>
+    </body>
+</html>

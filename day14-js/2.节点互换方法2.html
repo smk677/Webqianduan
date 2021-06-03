@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 800px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+        }
+        #left{
+            width:300px;
+            background-color: blanchedalmond;
+            line-height: 20px;
+            text-align: center;
+        }
+        #cent{
+            width:300px;
+            background-color: greenyellow;
+        }
+        #cent button{
+            width: 100%;
+            height: 30px;
+            margin: 30px 0;
+        }
+        #right{
+            width:300px;
+            background-color: burlywood;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+       <div id="left">
+           <p>left的内容1</p>
+           <p>left的内容2</p>
+           <p>left的内容3</p>
+           <p>left的内容4</p>
+       </div>
+       <div id="cent">
+           <button id="toright">&gt;&gt;&gt;&gt;&gt;</button>
+           <button id="toleft">&lt;&lt;&lt;&lt;</button>
+       </div>
+       <div id="right">
+        <p>right的内容1</p>
+        <p>right的内容2</p>
+        <p>right的内容3</p>
+        <p>right的内容4</p>
+      </div>
+   </div>
+   <script>
+       var oOuter=document.getElementById("outer");
+       var oLeft=document.getElementById("left");
+       var oLeftPs=oLeft.querySelectorAll("#left p");
+       var oRight=document.getElementById("right");
+       var oRightPs=oRight.querySelectorAll("#right p");
+
+       var oCent=document.getElementById("cent");
+       var oToright=document.getElementById("toright");
+       var oToleft=document.getElementById("toleft");
+
+
+       //绑定left所有的点击事件
+       oLeftPs.forEach(function(item,index){
+            item.onclick=function(){
+                this.style.backgroundColor="red";
+                  //点击之后给它一个属性标记
+               this.dataset.click=true;    
+            }
+       })
+      //绑定Right所有的点击事件
+      oRightPs.forEach(function(item,index){
+        //    console.log(item);
+            item.onclick=function(){
+                this.style.backgroundColor="red";
+                  //点击之后给它一个属性标记
+               this.dataset.click=true;    
+            }
+       })
+    oToright.onclick=function(){
+        //因为获取元素的新方法是，静态的，获取一次之后不管了，所以每次点击都要重新获取
+        var oLeftPs=oLeft.querySelectorAll("#left p");
+        //遍历获取选择的值
+        oLeftPs.forEach(function(item,index){
+           if(item.dataset.click){
+               item.style.backgroundColor="transparent"
+               oRight.appendChild(item);
+               delete item.dataset.click;
+           }
+       })
+    }   
+    oToleft.onclick=function(){
+        var oRightPs=oRight.querySelectorAll("#right p");
+        //遍历获取选择的值
+        oRightPs.forEach(function(item,index){
+           if(item.dataset.click){
+               item.style.backgroundColor="transparent"
+               oLeft.appendChild(item);
+               //因为它前面选中的时候已经添加了属性值，为了防止在oLeft没有选中它时跟着移动，所以要删除它
+               delete item.dataset.click;
+           }
+       })
+    }   
+   </script>
+</body>
+</html>

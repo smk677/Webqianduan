@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+         
+        <script>
+         /* 
+         parseInt和parseFloat
+         */
+        //parseInt将字符串转数字  取整,从第一个数开始遇到非数字停止
+        console.log(parseInt("123a"));//123
+        console.log(parseInt("123"));//123
+        console.log(parseInt("a123"));//NaN
+
+         //parseFloat将字符串转数字 可以取浮点数（只能碰一次小数点）,从第一个数开始遇到非数字停止
+         console.log(parseFloat("123"));//123
+         console.log(parseFloat("123a"));//123
+         console.log(parseFloat("a123"));//NaN
+         console.log(parseFloat("123.12a"));//123.12
+         console.log(parseFloat("1.2.3"));//1.2
+
+          //parseInt还能用于进制的转化
+          console.log(parseInt("0b11",10));//0
+          console.log(parseInt("0x110",10));//0
+          console.log(parseInt("1111",16));//4369
+          console.log(parseInt("10",6));//6
+          console.log(parseInt("z",36));//35
+          console.log(parseInt("12",0));//12,0默认为10进制
+
+          /* 
+          逗号运算符
+          */   
+         // 1.一条语句可以进行多个操作
+         var a=2,b=1;
+         //2.先执行逗号左侧，再执行逗号右侧，最后返回逗号右侧的值
+         var c=(1,2,3,4,5,6);
+         console.log(c);//6
+        
+         //循环语句
+         for( var i=1;i<=6;i++ ){
+             console.log(i);
+         }
+           //第二条语句返回的布尔值 是看j<10的这句话，因为逗号操作符返回右侧的值
+        for (var i = 0, j = 0; i < 4, j < 10; i++, j++) {
+            console.log(i, j);
+        }
+
+        /* 
+        赋值运算符：有返回值
+        */
+         //下面之声明了变量b，虽然c d e被赋值了，但不能用
+         var b = c = d = e = 2;
+            /*  f = c; */
+             console.log(c);
+
+
+             /* 
+              乘法：
+                所有全部转为number运算
+             */
+                 console.log(2 * 2) //4
+                console.log(2 * -2) //-4
+                console.log(2 * -2.1) //-4.2
+                console.log("2" * 2) //4
+                console.log("2" * "2") //4
+                console.log("2a" * "2") //NaN
+                console.log(true * "2") //2
+                console.log(true * 1) //1
+                console.log(null * 1) //0
+                console.log(null * undefined) //NaN
+
+        /* 
+        减法：也是全部转为number运算
+        */
+        console.log("3" - 1) //2
+        console.log("3" - "1") //2
+        console.log("3" - "1a") //NaN
+        console.log(null - true) //-1
+        console.log(null - undefined) //NaN
+
+        /* 
+         加法运算
+        */
+        console.log("3" + 1) //'31'
+        console.log("3" + "1") //'31'
+        console.log("3" +"1a") //'31a'
+        console.log(1+2+3+"a1");//'6a1'
+        console.log(1+2+[]);//'3'
+        console.log(1+2+[1]);//'31'
+        console.log(1+2+[1,2]);//31,2
+        console.log(1+2+{});//3[object Object]
+        </script>
+       
+        
+    </body>
+</html>

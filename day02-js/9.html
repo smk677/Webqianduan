@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+         <!-- 输入半径，求面积和周长 -->
+         <input type="text" id="re">
+         <button type="button" id="btn">计算</button>
+        <script>
+            var oRe=document.getElementById("re");
+            var oBtn=document.getElementById("btn");
+
+            oBtn.onclick=function(){
+                //获取用户输入的数字（没做判断）
+               var pre=oRe.value;
+               document.write(parseInt(3.14156*pre*pre)+"</br>");
+               document.write(parseInt(3.14156*2*pre));
+            }
+        </script>
+    </body>
+</html>

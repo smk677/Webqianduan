@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          元素定位：
+          indexOf:
+            1.检测元素在数组中第一次出现的位置
+            2.如果当前元素在数组中没有出现，则返回-1
+            3.参数2规定从第几个开始找，可以为负数（倒着数），参数2如果没写，默认从0开始
+          
+          lastIndexOf:
+            跟indexOf一样，找的是最后一次出现的位置，不过是从右开始往左找,但是返回的位置是从前开始数的。
+        */
+      /*  var array=[1,2,3,4,5,6,7,"b"]
+       //var re=array.indexOf(4);//返回的是对应的下标（索引）
+       //var re=array.indexOf(4,4);//-1，对应的下标
+       //var re=array.lastIndexOf("b",4);//-1（，没找），返回的位置是从前开始数的。
+       var re=array.lastIndexOf("b",-1);//7,返回的位置是从前开始数的。
+       console.log(re); */
+
+       /* 
+        字符串：
+        toString():
+        把数组转字符串的方法，有时在一些隐式转换的时候也会调用toString
+
+         toLocalString()
+                根据电脑运行环境决定转换的值
+       */
+       /* var arr = [1, 2, 333333333, 4, "hello"];
+        var re = arr.toLocaleString();
+        console.log(re); */
+        var arr = [1, 2, 333333333, 4, "hello"];
+        //重写toString 观察到arr隐式转换的时候可能调用toString
+        arr.toString = function () {
+            return "abc";
+        }
+        console.log(arr + 1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        div ul{
+           display: inline-block;
+           margin: 0;
+           padding: 0px;
+           list-style-type: none;
+          /*  border: 1px solid red; */
+         }
+         div ul li{
+             height: 30px;
+             line-height: 30px;
+            /*  border: 1px solid blue; */
+         }
+         div ul li input{
+             display: none;
+         }
+         div ul li label::before{
+             display:inline-block;
+             content:"✔";
+             width: 30px;
+             height: 30px;
+             color: #fff;
+             text-align: center;
+             margin-right:7px;
+             border: 1px solid #DE8650;
+         }
+         div ul li input:checked+label::before{
+             background: #DE8650;
+         }
+         div ul li:last-child input:checked+label::after{
+             content: "你说对了！";
+             color: green;
+         }
+    </style>
+</head>
+
+<body>
+   <div>
+      <ul>
+        <li>
+            <input type="radio" name="rd" id="rd1"/>
+            <label for="rd1">李沛华真丑!</label>
+        </li>
+        <li>
+            <input type="radio" name="rd" id="rd2"/><label for="rd2">李沛华真丑!</label>
+        </li>
+        <li>
+            <input type="radio" name="rd" id="rd3"/><label for="rd3">李沛华真丑!</label>
+        </li>
+        <li>
+            <input type="radio" name="rd" id="rd4"/><label for="rd4">李沛华真妖娆!</label>
+        </li> 
+       </ul>
+    </div>
+</body>
+</html>

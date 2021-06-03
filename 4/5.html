@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+          div#father{
+           width: 500px;
+          /*  border: 1px solid black;   */
+          }
+          div#father ul{
+              margin: 0px;
+              padding: 0px;
+              list-style-type: none;
+          }
+          div#father ul li{
+              width: 100%;
+              margin-top: 1px;
+            /*   border: 1px solid red; */
+          }
+          div#father ul li h4{
+              margin: 0px;
+              padding-left: 10px;
+              height: 40px;
+              line-height: 40px;
+              color: #fff;
+          }
+          div#father ul li:nth-of-type(1) h4{
+              background: #DBE5F3;
+          }
+          div#father ul li:nth-of-type(2) h4{
+              background: #F3E0E8;
+          }
+          div#father ul li:nth-of-type(3) h4{
+              background: #CF93C1;
+          }
+          div#father ul li:nth-of-type(4) h4{
+              background: #BECB86;
+          }
+          div#father ul li:nth-of-type(5) h4{
+              background: #AD9BAD;
+          }
+          div#father ul li div{
+              position: relative;
+              width: 100%;
+              height: 0px;
+              transition-property:height;
+              transition-duration: 1s;
+              transition-timing-function:ease-out;
+           /*    border: 1px solid red; */
+          }
+          div#father ul li div img{
+              position: absolute;
+              top:50%;
+              left:50%;
+              margin-left:-125px;
+              margin-top:-75px;
+              width: 250px;
+              height: 150px;
+              border-radius: 5px;
+              opacity: 0;
+              transition-property:opacity;
+              /* , margin-left, margin-top,top,left */
+              transition-timing-function:cubic-bezier(.39,.36,.84,.71);
+            }   
+          div#father ul li:hover div{
+              height:300px;
+             
+             /*  border: 1px solid black; */
+          }
+          div#father ul li:hover div  img{
+              opacity: 1; 
+              transition-duration: 1s;
+              transition-delay: 1s;
+          }
+	</style>
+</head>
+
+<body>
+	  <div id="father">
+         <ul>
+             <li>
+                 <h4>温柔贤惠</h4>
+                 <div>
+                     <img src="./imgs/5710984334b7e.jpg" alt="">
+                 </div>
+             </li>
+             <li>
+                <h4>甜美时尚</h4>
+                <div>
+                    <img src="./imgs/5cb450ae20929.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <h4>独立稳重</h4>
+                <div>
+                    <img src="./imgs/5ba44d4304441.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <h4>妩媚性感</h4>
+                <div>
+                    <img src="./imgs/56af0da3ae601.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <h4>女汉子</h4>
+                <div>
+                    <img src="./imgs/F8F2-fxipenp2527999.jpg" alt="">
+                </div>
+            </li>
+         </ul>
+      </div>
+</body>
+
+</html>  

@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+         
+        <script>
+           /* 
+            其他类型转Number
+           */
+          //1.boolean转换为number，true为1,false为0
+           console.log(Number(true));
+           console.log(Number(false));
+
+          //2.string转换为number,
+          console.log(Number(""));//0
+          console.log(Number(" "));//0
+          console.log(Number("1"));//1
+          console.log(Number("123"));//123
+          console.log(Number("1.23"));//1.23
+          console.log(Number("1aa"));//NaN
+        console.log(Number("Infinity"))//Infinity
+        console.log(Number("0b111"))//7
+
+          //3.undefined和null转换number
+          console.log(Number(undefined));//NaN
+          console.log(Number(null));//0
+
+          //4.对象类型(object)转换Boolean,都为true
+          console.log(Number([]));//0
+          console.log(Number([1]));//1
+          console.log(Number([1,2]));//NaN
+          console.log(Number({}));//NaN
+          console.log(Number(function (){}));//NaN
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+         <!-- 累加 -->
+         <input type="text" id="re" value="0">
+         <button type="button" id="btn">累加</button>
+        <script>
+            var oRe=document.getElementById("re");
+            var oBtn=document.getElementById("btn");
+              
+            //设置一个变量来保存累加值
+            var lj=0; 
+           
+            oBtn.onclick=function(){
+              oRe.value=lj+2; 
+              lj= Number(oRe.value);
+              //令他最高加到50
+              if(lj===50){
+                  lj=0; 
+              }
+            }
+        </script>
+    </body>
+</html>

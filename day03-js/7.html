@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+          
+        </style>
+    </head>
+    <body> 
+        输入一个钱数: <input type="text" id="put">
+        <button id="btn">点击</button>
+        <script>
+           /* 
+            循环语句：
+            js提供了三种类型的循环
+            while 、do... while、for
+           */
+        /*1. while循环，如果if和for连用时可以使用while循环,跟简洁，先判断再执行
+        while(判断试){
+            语句块
+        }
+        */
+       /* 
+        var a=0;
+        while(a<=12){
+            document.write(a+"<br>");
+            a++;
+        } */
+
+        /* 
+         2.do...while循环：先执行一次，再判断，如果判断为真，又执行do1里面的语句块
+        */
+      /*   var a=1;
+       do{
+        document.write(a+"<br>");
+         a++;
+       }while(a<=12); */
+
+       /* 
+       for循环：
+       for(语句1;判断试2;语句3){
+           语句块
+       }
+        */
+         //for循环练习
+            //求1到9的和
+            /* var he=0;
+            for(var a=1;a<=9;a++){
+                he+=a;
+            }
+            document.write(he); */
+            //求1到100的和
+           /*  var he=0;
+            for(var a=1;a<=100;a++){
+                he+=a;
+            }
+            document.write(he); */
+            //求1-99中的单数的和
+           /*  var he=0;
+            var a=1;
+            while(a>=1 && a<=99){
+                if(a%2===1){
+                    he+=a;
+                }
+                 a++;
+            }
+            document.write(he); */
+            //求1-99中是3的倍数的数字和
+         /*    var he=0;
+            var a=1;
+            while(a>=1 && a<=99){
+                if(a%3===0){
+                    he+=a;
+                }
+                 a++;
+            }
+            document.write(he); */
+            //定义一个v，当v等于0时，v进行3次自加1。否则v进行4次自加2
+          /*    var v=0;
+            if(v==0){
+              for(var i=1;i<=3;i++){
+                     v+=1;
+              }
+             document.write(v);
+            }else{
+                for(var i=0;i<=4;i++){
+                    v+=2;
+                 }
+                 document.write(v);
+            } */
+            //定义v＝3；对变量i由0到3进行遍历；当i 等于2时，v自加2；否则v自加3
+            var v=3;
+              for(var i=0;i<=3;i++){
+                     if(i==2){
+                        v+=2;
+                     }else{
+                         v+=3;
+                     }
+              }
+             document.write(v);
+        </script>
+    </body>
+</html>

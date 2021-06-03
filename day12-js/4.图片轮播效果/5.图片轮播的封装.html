@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #father{
+            width: 300px;
+            height: 500px;
+            position: relative;
+        }
+        #pho{
+            overflow-x: scroll;
+            display: flex;
+          
+        }
+        #pho img{
+            width: 300px;
+            height: 500px;
+        }
+        .left,.right{
+            width: 30px;
+            height:30px;
+            line-height:30px;
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            background-color: cornflowerblue;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+        }
+        .left{
+            left: 5px;
+        }
+        .right{
+            right: 5px;
+        }
+        #radi{
+            margin: 0px;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #radi li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #959CA3;
+            margin: 0px 2px;
+        }
+        #radi li.active{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <div id="pho">
+            <img src="../image/01.jpg">
+            <img src="../image/02.jpg">
+            <img src="../image/03.jpg">
+            <img src="../image/04.jpg">
+            <img src="../image/05.jpg">
+        </div> 
+        <p class="left">&lt;</p>
+        <p class="right">&gt;</p>
+
+         <ul id="radi">
+             <li class="active"></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+        
+    </div>
+
+       <script>
+           var oPho=document.querySelector("#pho");
+           var oImgLis=oPho.querySelectorAll("#pho img");
+           var oLeft=document.querySelector(".left");
+           var oRight=document.querySelector(".right");
+           var oRadi=document.querySelector("#radi")
+           var oList=document.querySelectorAll("#radi li")
+          
+           var outTime=null;
+           var moveTime=null;
+           //设一个变量来代表图片的下标
+           i=0;
+           
+        //  封装函数
+        //自走动画
+         function aomvTime(){
+            outTime=setInterval(function(){
+              //为了防止本次执行的计时器，前面的计时器还没执行完，要先清除一下
+              clearInterval(moveTime);
+             //每过两秒加1
+             i++;
+             //如果超出图片对应的小标，让它为0
+             if(i>oImgLis.length-1){
+                 i=0;
+             }
+            //起始位置
+                    var stalaction=oPho.scrollLeft;
+
+                    //结束位置
+                    var endlation=i*oImgLis[0].offsetWidth;
+
+                    //起始步数
+                    var stastep=0;
+                    //结束步数
+                    var endstep=40;
+                    //每一步的步数
+                    var everystep=(endlation-stalaction)/endstep;
+
+                    moveTime=setInterval(function(){
+                        stastep++;
+                        if(stastep>=endstep){
+                            clearInterval(moveTime);
+                        }
+                        stalaction+=everystep;
+                        oPho.scrollLeft=stalaction;
+                    },10)       
+            oList.forEach(function(item,index){
+                item.classList.remove("active")
+            })
+            oList[i].classList.add("active");
+           },2000)
+         }
+         
+          //动画
+          function dh(){
+                    //起始位置
+                    var stalaction=oPho.scrollLeft;
+
+                    //结束位置
+                    var endlation=i*oImgLis[0].offsetWidth;
+
+                    //起始步数
+                    var stastep=0;
+                    //结束步数
+                    var endstep=40;
+                    //每一步的步数
+                    var everystep=(endlation-stalaction)/endstep;
+
+                    moveTime=setInterval(function(){
+                        stastep++;
+                        if(stastep>=endstep){
+                            clearInterval(moveTime);
+                        }
+                        stalaction+=everystep;
+                        oPho.scrollLeft=stalaction;
+                    },10)       
+          }    
+
+         //遍历li
+         function oli(){
+            oList.forEach(function(item,index){
+                item.classList.remove("active")
+            })
+            oList[i].classList.add("active");
+         }
+
+         //清除定时器
+           function clearTim(){
+            clearInterval(outTime) ;
+               clearInterval(moveTime);
+           }
+
+           //动画
+          aomvTime();
+        
+           oRight.onclick=function(){
+             clearTim();
+             //每过两秒加1
+             i++;
+             //如果超出图片对应的小标，让它为0
+             if(i>oImgLis.length-1){
+                 i=0;
+             }
+            
+            dh();   
+           oli();
+           aomvTime()
+           }
+
+           oLeft.onclick=function(){
+            clearTim();
+             //每过两秒加1
+             i--;
+             //如果超出图片对应的小标，让它为 临界值
+             if(i<0){
+                 i=oImgLis.length-1;
+             }
+            
+            dh();   
+           oli();
+           aomvTime()
+           }
+
+           //给圆点添加点击动画
+           oList.forEach(function(item,index){
+               item.onclick=function(){
+                clearTim();
+                   oList.forEach(function(item,index){
+                     item.classList.remove("active");
+                   })
+                   this.classList.add("active");
+                    i=index;
+                   dh();
+                   aomvTime()
+
+               }
+               
+           })
+
+       </script>
+</body>
+</html>

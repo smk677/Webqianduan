@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        offset系列:
+           offsetWidth和offsetHeight:获取元素的border-box的宽度和高度
+           offsetLeft和offsetTop:获取元素外边框到最近定位的父级元素的边框内测的距离
+        
+        client系列：
+           clientWidth和clientHeight：获取元素的padding-box的宽度和高度
+           clientLeft和clienTop：获取元素左边框和右边框的宽度
+         
+        scroll系列：
+           scrollWidth和scrollHeight:获取元素包含完整内容的宽度和高度
+           scrollLeft和scrollTop: 获取或设置滚动条滑动的距离
+        
+        获取文档的高度(没有宽度)：
+          document.documentElement.offsetHeight
+          document.documentElement:代表根元素(html)   
+
+        获取窗口的高度：
+          document.documentElement.clientHeight
+        
+        获取系统滚动条的距离：
+          document.documentElement.scrollTop
+          window.pageYOffset
+         
+        设置系统滚动条的距离：
+          document.documentElement.scrollTop
+          window.scrollTo(x,y)   
+         
+        给元素绑定鼠标移入事件：
+          元素.onmouseenter=function(){
+
+          };  
+
+        超时调用定时器：
+             定时器函数:setTimeout(function(){
+
+             },1000)//毫秒
+
+             定时器函数是除了事件函数外的第二种异步执行的代码
+             
+             清除超时调用计时器：
+             clearTimeout()
+        */
+    </script>
+</body>
+</html>

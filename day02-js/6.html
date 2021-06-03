@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <style>
+         
+        </style>
+    </head>
+    <body>
+         
+        <script>
+           /* 
+            其他类型转boolean（就两个值true,false）
+           */
+          //1.number转换为boolean，非0为true,0为false,NaN为false
+          var n1=Boolean(1);//true
+          var n2=Boolean(0);//false
+          var n3=Boolean(-1);//true
+          var n4=Boolean(Number("1a"));//false,非数值转Boolean为false
+          console.log(n1,n2,n3,n4);
+
+          //2.string转换为boolean,非空为true,空为false
+          var n5=Boolean("sdad");//true
+          var n6=Boolean("1324");//true
+          var n7=Boolean("");//false
+          var n8=Boolean("[]");//true
+          var n9=Boolean("{}");//true
+          console.log(n5,n6,n7,n8,n9);
+
+          //3.undefined和null转换Boolean,都是false
+          console.log(Boolean(null));
+          console.log(Boolean(undefined));
+
+          //4.对象类型(object)转换Boolean,都为true
+          console.log(Boolean({}));
+          console.log(Boolean([]));
+          console.log(Boolean([1,2]));
+          console.log(Boolean(function(){}));
+        </script>
+    </body>
+</html>

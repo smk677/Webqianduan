@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           /* 
+            this:
+                - 是一个指针型的变量，代表的是当前的运行环境
+                - 除了函数以外，全局也有自己的this，指向window对象
+                - 每一个函数都有自己的this，指向当前函数的调用者,如果没有调用者，则指向全局对象window
+            
+            函数的调用方式：
+                - 默认调用，自己调用
+                - 上下文对象调用
+        
+        */
+        /* function fn() {
+
+        }
+
+        //默认调用
+        fn(); 
+        var obj = {
+            name: "laowang",
+            do: function () {
+
+            }
+        }
+        //obj是上下文对象，do是被上下文对象调用的
+        obj.do();   */
+
+      //事件函数的this,一般指向当前的绑定事件的对象
+        document.onclick = function () {
+            console.log(this);
+        }
+         document.onclick();
+    </script>
+</body>
+</html>

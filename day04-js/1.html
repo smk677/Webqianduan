@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /* 
+             break和continue:
+           1、 break:跳出循环，是跳出整个循环，执行循环后面的代码；
+           2、 continue:跳出本次循环，然后接着执行下一次循环
+            */
+           //1.break：跳出循环，是跳出整个循环，执行循环后面的代码；
+           /*  for(var i=1; i<=100;i++){
+                console.log(i);
+                if(i==50){
+                    alert("整个循环被打断，循环结束！！");
+                   break;
+                }  
+            } */
+           //2.continue:跳出本次循环，然后接着执行下一次循环
+          /*  var i=0;
+           while(i<20){
+             i++;
+             if(i==15){
+             continue;
+             } 
+             console.log(i);
+           } */
+ 
+
+           /* 
+           label标签语句（就是自己创建一个标识符）：
+              一般跟break一起使用
+           */
+         /*  outbrk:
+              for(var i=1;i<=15;i++){
+                    if(i===13){
+                        break outbrk;
+                    }
+                    document.write(i+"<br>");
+              } */
+            
+
+              /* 
+               练习：
+              */
+               //求整数1～100的累加值，但要求碰到个位为3的数则停止累加
+             /*  var count=0;
+              for(var i=1;i<=100;i++){
+                  if(i%10==3){
+                     continue 
+                  }
+                  count+=i;
+              }
+              document.write(count); */
+               //求整数1～100的累加值，但要求跳过所有个位为3的数
+             /*   var count=0;
+              for(var i=1;i<=100;i++){
+                  if(i%10==3){
+                     continue 
+                  }
+                  count+=i;
+              }
+              document.write(count); */
+               //求1-100之间不能被7整除的整数的和（用continue）
+             /*   var count=0;
+              for(var i=1;i<=100;i++){
+                  if(i%7==0){
+                     continue 
+                  }
+                  count+=i;
+              }
+              document.write(count); */
+              // 求200-300之间所有的奇数的和（用continue）
+             /*  var count=0;
+              for(var i=200;i<=300;i++){
+                  if(i%2==0){
+                     continue 
+                  }
+                  count+=i;
+              }
+              document.write(count); */
+             //求200-300之间第一个能被7整数的数（break）
+              for(var i=200;i<=300;i++){
+                  if(i%7==0){
+                    break
+                  }
+              }
+              document.write(i);
+        </script>
+    </body>
+</html>

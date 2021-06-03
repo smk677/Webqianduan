@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            name:"狗贼",
+            fn:function(){
+             console.log("哪里跑");
+            },
+             arry:[1,5,4,2]
+        }
+
+        //浅拷贝
+        //obj1拷贝oj
+        var obj1={};
+        for(var key in obj){
+           obj1[key]=obj[key]; 
+        }
+        console.log(obj1);
+    </script>
+</body>
+</html>

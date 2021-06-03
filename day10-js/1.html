@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="box">
+        <p>我是p标签</p>
+        <span>hello</span>
+        <i>i标签</i>
+        <div>我是div</div>
+        <!--<h3>h333</h3>-->
+        <em>em标签</em>
+    </div>
+    <script>
+        /* 
+          节点：
+             childNodes:
+             获取一个节点内所有的子节点，返回一个NodeList(13)对象，自身拥有forEach()方法，可以遍历
+             
+             nodeType():获取节点类型；
+             nopeName():获取节点的名字
+             nopeValue()：获取节点的值
+         */
+        /* var oBox=document.getElementById("box");
+        var nope=oBox.childNodes;//获取一个节点内所有的子节点，返回一个NodeList(13)对象，自身拥有forEach()方法，可以遍历
+        console.log(nope);//13
+
+        console.log(oBox.nodeType);
+        console.log(oBox.nodeName); */
+
+        function fn2() {
+            console.log(foo); //fun
+
+            function foo() {}
+            var foo = 1;
+            console.log(foo) //1
+        }
+        fn2();
+    </script>
+</body>
+</html>

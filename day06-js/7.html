@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        定义数组：
+           1.字面量：
+            var arr=[];
+           
+           2.实例化构造函数
+           var arr=new Array();
+        */
+       var arr=[];//定义一个空数组
+
+       //数组的值可以是任何类型
+       var arr1=["dsad",1,null,undefined,function (){},Boolean];
+
+       //当构造函数的参数只有一个，且是一个number类型的时候，则这个数字代表的是数组的长度，而不是数组的值
+       var arr5 = new Array(3);
+
+
+       /* 
+       多维数组：
+          数组里面套数组：var arr=[a,2[1,2,3],4];//这个数组称为二维数组
+          里面有多少数组称为几维数组
+       */
+       var arr2 = [1, [2, 3, [4, 5, [6], 7], 8], 9]
+       console.log(arr2[1][2]);//打印数组的中下标为1，且下标为1的数组中下标为2的值
+
+        //空位数组
+        //数组内部如果以逗号为结尾，则忽略，不会当作一个值
+        var arr3 = [1, 2, , 4, 5, ];
+        console.log(arr3)
+        //空位数组空位的值是undefined
+        console.log(arr3[2])
+
+        /* 
+        伪类数组：
+          不是数组，但是像数组；
+          其实是一个对象，但是符合两个特征:
+             1：key是从0开始自然递增 
+             2：拥有length属性表示长度
+        */
+       var likeArray={
+           0:"sd",
+           1:"sad",
+           2:"ff",
+           length:3
+       }
+       console.log(likeArray)
+       console.log(likeArray[1]);
+    </script>
+</body>
+</html>

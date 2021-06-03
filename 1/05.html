@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="#">
+           <table>
+               <tr>
+                   <td>邮箱地址</td>
+                   <td><input type="email" name="yx"></td>
+               </tr>
+               <tr>
+                <td>密　　码</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>确认密码</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>上传头像</td>
+                <td><input type="file" multiple></td>
+            </tr>
+            <tr>
+                <td>性　　别</td>
+                <td>
+                    <label for="wm">女</label><input type="radio"  value="wonan" name="ren" id="wm" checked="checked">
+                    <label for="m">男</label><input type="radio" value="nan" name="ren" id="m">
+                </td>
+            </tr>
+            <tr>
+                <td>兴　　趣</td>
+                <td>
+                     <label for="ds">登山</label> <input type="checkbox" name="aihao" value="denshan" id="ds" checked>
+                     <label for="jy">郊游</label> <input type="checkbox" name="aihao" value="jiaoyou" id="jy">
+                     <label for="dy">钓鱼</label> <input type="checkbox" name="aihao" value="diaoyu" id="dy">
+                     <label for="yy">养鱼</label> <input type="checkbox" name="aihao" value="yangyu" id="yy">
+                     <label for="sy">饲养宠物</label> <input type="checkbox" name="aihao" value="siy" id="sy">
+                     <label for="yx">网络游戏</label> <input type="checkbox" name="aihao" value="wanl" id="yx">    
+                </td>
+            </tr>
+            <tr>
+                <td>国　　家</td>
+                <td>
+                    <select name="country" >
+                     <optgroup label="亚洲">
+                        <option value="z" selected>中国</option>
+                        <option  value="r" >日本</option>
+                        <option value="h">韩国</option>
+                        <option value="els">俄罗斯</option>
+                     </optgroup>
+                       <optgroup label="北美洲">
+                         <option value="m">美国</option>
+                         <option value="b">巴西</option>
+                       </optgroup> 
+                       <optgroup label="欧洲">
+                        <option value="y">英国</option>
+                        <option value="d">德国</option>
+                    </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><input type="submit" value="登录"></td>
+            </tr>
+           </table>
+        </form>
+      <hr size="1"/>
+        <!-- 内联框架 
+             frameboder:内联框架发边框
+        -->
+       <!--  <iframe src="./css1.html" frameborder="1" width="500" height="500">
+           
+        </iframe> -->
+    </body>
+</html>

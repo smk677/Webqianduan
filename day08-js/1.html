@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            将数组的0去掉
+            数组排序去重
+            返回数组的最大最小值
+            求一组数中的所有数的和和平均值
+            求一组数中的最大值和最小值，以及所在位置
+            翻转数组
+            冒泡排序，从小到大
+        */
+       //1.将数组的0去掉
+      /*  var array=[1,2,3,2,0,5,0,8,9,0];
+       var newArray=[];
+       var re=array.forEach(function(item,index){
+              if(item!==0){
+                newArray.push(item);
+              }
+       })
+       console.log(re);
+       console.log(newArray); */
+
+       //过滤
+       /* var array=[1,2,3,2,0,5,0,8,9,0];
+       var re=array.filter(function(item,index){
+           return item!==0;
+       })
+       console.log(re);
+       console.log(array); */
+
+       //2.数组排序去重
+     /*  var array=[1,2,3,2,0,5,0,8,9,0];
+       var re=array.sort(function(a,b){
+               return a-b;//a-b>=0，升序排列
+       })
+       console.log(re);
+       console.log(array); 
+        //新数组
+       var newArray=[];
+      for(var i=0;i<array.length;i++){
+            console.log(array[i]); 
+            if(array[i]!==array[i+1]){
+               newArray.push(array[i]);//把它赋值给新数组
+            }
+       } 
+       console.log(newArray); */
+
+       //for 嵌套去重
+       /* var array=[1,2,3,2,0,5,0,8,9,0];
+       console.log(array.length);
+      for(var i=0;i<array.length;i++){
+           for(var j=i+1;j<array.length;j++){
+                if(array[i]==array[j]){
+                       array.splice(j,1);
+                }
+           }
+      }
+      console.log(array); */
+       
+     /*  var array=[1,2,3,2,0,5,0,8,9,0];
+      console.log(array);
+      var newArray=[];
+       array.forEach(function(item,index){
+         
+           console.log(array.indexOf(item));
+         //indexOf(值)：返回的是数组中出现这个值的第一个值的下标，检测它值的下标 是否跟 下标对的上
+         //如上面的数组中的值2，第一次出现的下标是1，当第二次出现，他的下标是3，但是因为indexOf找的是第一次出现的值是1，跟他本来的下标对不上，所以他就是已经出现过的了
+          if(array.indexOf(item)===index){
+            newArray.push(item);
+          }
+      })
+      console.log(newArray); */
+
+      /* var array=[1,2,3,2,0,5,0,8,9,0];
+      var newArray=[];
+      array.forEach(function(item,index){
+          //如果新数组中找不到这个值，那就是没有，把它添加进去
+          if(newArray.indexOf(item)==-1){
+            newArray.push(item);           
+          }
+      })
+      console.log(newArray); */
+
+      /* var array=[1,2,3,2,0,5,0,8,9,0];
+      var re=array.filter(function(item,index){
+          //array.indexOf(item)返回的下标跟这个值的下标一样的话，把这个值添加进新数组
+           return  array.indexOf(item)===index;
+      })
+      console.log(re); */
+
+      //3.返回数组的最大最小值
+     /*  var array=[1,4,3,8,9,10,23,11,22,6]
+      var re=array.sort(function(a,b){
+          return a-b;
+      })
+      console.log(re);
+      console.log("数组的最小值："+array.shift());
+      console.log("数组的最大值："+array.pop()); */
+
+     /*  var array=[1,4,3,8,9,10,23,11,22,6]
+      var base=array[0];
+      var zxz=array[0];
+      array.forEach(function(item,index){
+          if(base<item){
+             base=item;
+          }
+          if(zxz>item){
+              zxz=item
+          }
+
+      })
+      console.log("数组的最大值："+base);
+      console.log("数组的最小值："+zxz); */
+      
+      //4.求一组数中的所有数的和和平均值
+    /*   var array=[1,4,3,8,9,10,23,11,22,6]
+      var num=0;
+      var  re=array.map(function(item,index){
+          num+=item;
+      })
+      console.log(num/array.length); */
+      //5.求一组数中的最大值和最小值，以及所在位置
+        
+      //6.翻转数组
+    /*   var array=[1,4,3,8,9,10,23,11,22,6]
+      var  re=[];
+        while(array.length>0){
+                re.push(array.pop());
+        }
+      console.log(re); */
+      //7.冒泡排序，从小到大
+      var array=[1,4,3,8,9,10,23,11,22,6]
+      //因为冒泡排序每次只能找到一个最大值，所以要找很多次，所以要for循环遍历得到次数
+      for(var i=0;i<array.length;i++){
+          for(var j=0;j<array.length;j++){
+               if(array[j]<array[j+1]){
+                    var zl=array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=zl;
+               }
+          }
+      }
+      console.log(array);
+
+      /* 
+      时间复杂度（时间维度）：
+                执行当前的算法所消耗的时间
+       空间复杂度（空间维度）：
+                执行当前的算法所需要占用的内存空间
+      */
+    </script>
+</body>
+</html>

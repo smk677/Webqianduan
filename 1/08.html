@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+           #one{
+             background: burlywood;
+           }
+           #two{
+               background: cadetblue;
+           }
+           #test{
+               border: dashed 2px red;
+              /*  line-height: 10px; */
+           }
+           img{
+               /* 
+                vertical-align:middle;
+                表示图片的垂直中心点与其内容（x）/父元素x-height的1/2处对齐
+                所以图片下移找内容x-height的1/2处，
+                因为父元素没设置大小，所以图片下移的时候，高度也自动下移
+                */
+            /*  vertical-align: middle; */
+           }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            1.div是块状元素，会独占一行，可以设置宽度和高度
+            2.span是行内元素，按字体来占大小，设置宽度和高度是无效的
+            水平并排排列，直到一行放不下为止
+            3.img是行内块状元素，可以设置宽度和大小，
+            但是也是水平排列，直到一行放不下自动换行为止
+         -->
+       <div id="one">
+         dhsajdasjklajds
+       </div>
+       <!-- --------------------- -->
+       <!-- 
+        为什么会出现图片下面会有这样一点点空白呢这种情况，
+        1.原因：因为html5中，所有行内元素的所有解析和渲染，
+        如同每个行框盒子前面有一个空白节点（这个节点是透明的，
+        不占任何宽度，也没法通过脚本获取）这个节点可以看作X。
+        只有用HTML5声明是才会有（<!DOCTYPE html>）
+
+        2.解决方法
+          1.图片块状化（没有基线，就没有基线对齐）
+           display: block;
+          2.设置图片底部对齐(应为它前面有内容，
+          所有默认为基线对齐 vertical-align:baseline;)
+           vertical-align:bottom;
+         3.给父元素设置行高为足够小，
+         同一行的内容就会往上移
+          line-height:0px;  
+        -->
+       <div id="test">
+       <span id="two">
+         dhsajdasjklajds
+       </span>
+       <img src="imgs/Frederik-the-Great1.jpg" alt="马">
+     </div>
+    </body>
+</html>

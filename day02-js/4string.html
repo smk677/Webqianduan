@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /* 
+            String字符串
+            1.单引号和双引号
+            2.单引号内嵌套双引号，双引号内嵌套单引号
+            3.转义符 '\'
+            4字符串不能在写的时候换行
+            */
+            var str='<ul id="fter">\
+              <li class="item"></li>\
+              <li class="item"></li>\
+              <li class="item"></li>\
+              <li class="item"></li>\
+              <li class="item"></li>\
+          </ul>';//在一行
+           console.log(str);
+           //单引号内嵌套双引号，双引号内嵌套单引号
+           //var name="我说：'来帮忙宰猪'";
+          var name='我说："来帮忙宰猪"';
+           console.log(name);
+           //使用转义字符
+           var say='我说：\n"来帮忙宰猪"';
+           console.log(say);
+
+           //lenght获取一个长度
+           var len='我说："来帮忙宰猪"';
+           console.log(len.length);
+  
+           console.log(len[2]);//打印其第二个下标指向的值（每个字符串的值都有对应的下标）
+        </script>
+         
+    </body>
+</html>

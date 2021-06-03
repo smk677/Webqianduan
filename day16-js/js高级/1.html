@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          基本数据类型：
+             Number Boolean String unll undefined(Symbol Bigint)
+              
+              基本包装类型：
+               number boolean string
+               怎么生成一个基本包装类型?
+                1.实例化当前的函数
+                2.直接使用Object方法
+
+          复杂数据类型：
+             Object Array function Math Date RegExp
+         */
+
+     //怎么生成一个基本包装类型?
+     /* var num1=1;
+     var num2=new Number(4);//方法1 实例化当前的函数
+     var num3=Object("sdad");//方法2 直接使用Object方法
+     console.log(num1);
+     console.log( num2);
+     console.log(typeof num2);//object
+     console.log(num3);
+ */
+     /* var num1=1;
+     var num2=new String("sdad");//方法1 实例化当前的函数
+     var num3=Object(1);//方法2 直接使用Object方法
+     console.log(num1);
+     console.log(num2);
+     console.log(typeof num2);//object
+     console.log(num3); */
+
+     var num1=1;
+     var num2=new Boolean(true);//方法1 实例化当前的函数
+     var num3=Object(true);//方法2 直接使用Object方法
+     console.log(num1);
+     console.log(num2);
+     console.log(typeof num2);//object
+     console.log(num3);
+    </script>
+</body>
+</html>

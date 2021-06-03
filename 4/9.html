@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+        div.father{
+            margin:100px auto;
+            position: relative;
+             width: 300px;
+             height: 300px;
+             /* border: 1px solid black; */
+             border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            animation-name: td;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+         .one,.two{
+             display: inline-block;
+             width: 70px;
+             height:100px;
+             background-color: red;
+           /*  border: 1px solid red; */
+           
+        }
+         .one{
+             position: absolute;
+             top:0px;
+             left: 20px;
+            transform:rotate(-46deg); 
+          /*   animation-name: td;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out; */
+        }
+        .two{
+             position: absolute;
+             top:0px;
+             left: 44px;
+            transform:rotate(46deg);
+           /*  animation-name: td;
+            animation-duration:1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;*/
+        } 
+        @keyframes td{
+            0%{
+               transform:scale(1.2) ;
+            }
+            50%{
+                transform:scale(1.3) ;
+            }
+            75%{
+                transform:scale(1.4) ;
+            }
+            100%{
+                transform:scale(1.5) ;
+            }
+        }
+	</style>
+</head>
+
+<body>
+    <div class="father">
+      <div class="one"></div>
+	  <div class="two"></div> 
+    </div>
+</body>
+
+</html>  

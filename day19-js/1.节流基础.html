@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oBox=document.getElementById("box");
+        
+        //让他在规定的事件段触发
+        var lastTime=0;
+        oBox.onmousemove=function(){
+           //获取当前时间段
+           var newTiem=Date.now();
+           if(newTiem-lastTime<800){
+               //你就滚
+               return;
+           }
+           lastTime=newTiem;
+
+           //执行核心代码,我们无法控制事件触发的频率，但是我们可以控制它执行核心代码执行的频率
+           console.log(1);
+        }
+    </script>
+</body>
+</html>

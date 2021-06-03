@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         隐式原型：
+           1.每一个对象都有一个隐式原型  __proto__
+           2.每一个函数都有一个显示原型 prototype
+           3.对象的隐式原型指向其构造函数的显示原型
+
+         使用：
+            1.当对象获取某个属性时，自身没有这个属性的时候，会沿着__proto__找到它的构造函数的显示原型prototype
+
+            2.给对象设置一个属性或方法时，不会通过__proto__,而是直接给对象设置上去了
+        */
+       
+        var arr=[1,2,3,4,4]
+        console.log(arr.__proto__);
+        console.log(arr.__proto__===Array.prototype);//true
+
+
+        //创建构造函数
+        function Person() {
+
+        }
+        //给构造函数的显示原型(prototype)添加属性
+        Person.prototype.say = function () {
+            console.log("海静最英俊");
+        }
+        //实例化构造函数
+        var p1 = new Person();
+        //自己没有say 会沿着__proto__找到Person的prototype
+        p1.say();
+        
+        //给对象设置一个属性或方法时，不会通过__proto__,而是直接给对象设置上去
+        p1.do = function () {
+            console.log("dododododo");
+        }
+        p1.do();
+
+       //调用say方法的时候如果自己已经有了，则不会去构造函数的原型对象查找
+        p1.say=function(){
+            console.log("培华最英俊");
+        }
+        p1.say();
+    </script>
+</body>
+</html>

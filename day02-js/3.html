@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /* 
+            Number（数字\数值）的类型:
+            */
+            //1.数字直接量(整数和浮点数)
+            var num1=2;
+            var num2=2.34;
+            document.write(num1+"</br>"+num2);
+
+            //2.不同的进制
+            //二进制以 0b为开头
+            var num3=0b11;//0*2^2+1*2^1+1*2^0=3
+            var num4=0b1011;//0*2^4+1*2^3+0*2^2+1*2^1+1*2^0=11
+            console.log(num3,num4);
+            //八进制写法一：以0为开头
+             var num5=011;//0*8^2+1*8^1+1*8^0=9
+             document.write(num5);//打印的是十进制 9
+            //八进制新写法：以0o为开头
+             var num6=0o11;
+             console.log(num6);//打印的是十进制 9
+            //十六进制：以0x为开头
+             var num7=0x11;//0*16^2+1*16^1+1*16^0=17
+             console.log(num7);//打印的是十进制 17
+            //3.科学计数法
+            var num8=0.6E-5;//E表示底数为10，5表示其指数代表往前移5个小数点
+            console.log(num8);
+            //4.无穷  Infinity：无穷大  -Infinity：无穷小
+             //分母为0会构成无穷大或无穷小
+             var num9=1/0;//Infinity
+             var num10=-1/0;//-Infinity
+             console.log(num9,num10);
+             //Infinity的运算，无法计算 加减乘除一个数字都是Infinity
+             var num11=Infinity+1;//Infinity
+             var num12=Infinity-1;//Infinity
+             var num13=Infinity*1;//Infinity
+             var num14=Infinity/1;//Infinity
+             console.log(num11,num12,num13,num14);
+            //Infinity的运算，关于Infinity与Infinity的运算,除了加法和乘法是Infinity,其余都是NaN
+            var num15=Infinity+Infinity;//Infinity
+            var num16=Infinity-Infinity;//NaN
+            var num17=Infinity*Infinity;//Infinity
+            var num18=Infinity/Infinity;//NaN
+            console.log(num15,num16,num17,num18);
+           // 5. 最大值和最小值
+            console.log(Number.MIN_VALUE);//5e-324
+           console.log(Number.MAX_VALUE);//1.7976931348623157e+308
+            //6.js计算精确问题  2的53次方是最大精确数字，如果高于2的53次方，则计算不再精确
+            var num21=(2**53-1);
+            console.log(num21);
+            var num20=(2**53);
+            console.log("js最大精确数字:"+num20);//打印变成了字符串(拼接)
+            var num22=(2**53+1);
+            console.log(num22);
+            var num23=(2**53+2);
+            console.log(num23);
+             //7.NaN（not a number）当强制将一些无法转为数字的类型转换数字的时候，直接变为NaN
+             var num24=Number("1");//1
+             var num25=Number("1aa");//NaN
+             var num26=Number([]);//0
+             var num27=Number([2]);//2
+             var num28=Number([2,2]);//NaN
+             var num29=Number({});//NaN
+             var num30=Number(null);//0
+             var num31=Number(undefined);//NaN
+             console.log(num24,num25,num26,num27,num28,num29,num30,num31);
+        </script>
+    </body>
+</html>

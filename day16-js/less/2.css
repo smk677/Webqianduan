@@ -1,0 +1,10 @@
+#out {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: rebeccapurple;
+}

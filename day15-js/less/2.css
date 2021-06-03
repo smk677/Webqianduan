@@ -1,0 +1,11 @@
+/*这个注释会编译到css中  */
+#out {
+  width: 400px;
+  height: 400px;
+  background-color: cadetblue;
+}
+#out #box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}

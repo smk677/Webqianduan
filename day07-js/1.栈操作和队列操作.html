@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        数组的栈操作：
+        push():往数组尾部插入值（一个或多个),并返回附加元素以后，数组的长度,push会改变了原数组
+        pop():删除数组尾部最后一个值，并返回删除的值
+         */
+         var array=[1,2,3,4,5]
+         //console.log(array);
+
+         //1.push方法
+         console.log(array.push(1,3,5));//返回附加元素以后，数组的长度8
+         console.log(array);//Array(8) [ 1, 2, 3, 4, 5, 1, 3, 5 ]
+
+         //2.pop方法
+         console.log(array.pop());//删除数组最后一个值，并返回删除的值(5)
+         console.log(array);
+
+
+         /* 
+          队列操作：
+             unshift()：往数组头部插入一个或多个值，改变了原数组，最后返回添加元素后的数组长度
+             shift()：删除数组的第一个元素，并返回该元素，改变了原数组，然后将余下的元素填补前面的空缺
+          */
+         //1.unshift():
+       /*    var array1=[1,2,3,4,5];
+          var re=array1.unshift(1,"b","c");
+          console.log(re);//8(返回添加元素后的数组长度)
+          console.log(array1);// [ 1, "b", "c", 1, 2, 3, 4, 5 ] */
+
+ /*   var arr = [1, 2, 3, 4, 5, 6];
+                //var re = arr.unshift("a");
+                // var re = arr.unshift(1, 2, 3);
+                //unshift方法分批插入和一次性插入结果是不一样的
+                var re = arr.unshift(1);
+                var re = arr.unshift(2);
+                var re = arr.unshift(3);
+                //[ 3, 2, 1, 1, 2, 3, 4, 5, 6 ]
+                console.log(arr);
+                console.log(re);   */
+
+        //2.shift();
+       /*    var array1=["b",2,3,4,5];
+          var re=array1.shift()
+          console.log(re);//b,删除数组的第一个元素，并返回该元素
+          console.log(array1);//0: 2  后将余下的元素填补前面的空缺
+                              //1: 3
+                              //2: 4
+                              //3: 5 */
+      
+    </script>
+</body>
+</html>

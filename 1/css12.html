@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .father{
+                height: 300px;
+                width: 300px;
+                background: pink;
+                border-top:solid pink 1px ;
+               /*  padding: 1px; */
+                /* overflow: hidden; */
+            }
+            .son{
+                height: 100px;
+                width: 100px;
+                background: #800080;
+                /* 
+                边距重叠：一个盒子和其子孙的边距重叠。
+                根据规范，一个盒子如果没有上补白和上边框，
+                那么它的上边距应该和其文档流中的第一个孩子元素的上边距重叠。
+                这就是为什么没加overflow:hidden 或 padding 或 overflow，父元素移动的原因  */
+                margin-top:50px ;/*这就是为什么没加overflow:hidden，父元素移动的原因  */
+            }
+            .yuan{
+                height: 300px;
+                width: 300px;
+                background: pink;
+                /* 
+                设置边框的角为圆角,通过调节数值大小调整四个角弯曲程度
+                border-radius
+                 */
+                border-radius:50px;
+            }
+            .yy{
+                margin: auto;
+                height: 100px;
+                width: 100px;
+                background: greenyellow;
+                /* 
+                  用于阴影
+                  box-shadow: 水平方向（可以为负值） 垂直方向（一样） 模糊程度  阴影的大小  阴影的颜色  向内还是向外自己调，也可以不填，默认向外（inset是向外）
+                 */
+                box-shadow:2px 3px 44px  10px rgb(107, 48, 48) ;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="father">
+         <div class="son"></div>
+       </div>
+       <div class="yuan"></div>
+       <p></p>
+       <hr/>
+       <div class="yy"></div>
+    </body>
+</html>

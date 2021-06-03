@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oBox=document.getElementById("box");
+        var x=0,y=0;
+         var l=false;
+         var r=false;
+         var t=false;
+         var b=false;
+        document.onkeydown=function(e){
+             switch(e.keyCode){
+                case 37:
+                  l=true;
+                   break;
+                case 38:
+                   t=true;
+                   break;
+                case 39:
+                  r=true;
+                  break;
+                case 40:
+                  b=true;
+                  break;
+             }
+            }
+
+        document.onkeyup=function(e){
+             switch(e.keyCode){
+                case 37:
+                  l=false;
+                   break;
+                case 38:
+                   t=false;
+                   break;
+                case 39:
+                  r=false;
+                  break;
+                case 40:
+                  b=false;
+                  break;
+             }
+            }
+             
+            setInterval(function(){
+                if(l){
+               x-=5;
+              }
+             if (t) {
+                y-=5;
+            } 
+             if (r) {
+               x+=5;
+            } 
+             if (b) {
+                y+=5;
+            }
+
+            if(x<=0){
+               x=0;
+            }
+             if(x>=document.documentElement.clientWidth-oBox.offsetWidth){
+                 x=document.documentElement.clientWidth-oBox.offsetWidth;
+            }
+            if(y<=0){
+               y=0;
+            }
+             if(y>=document.documentElement.clientHeight-oBox.offsetHeight){
+                 y=document.documentElement.clientHeight-oBox.offsetHeight;
+            }
+            oBox.style.left=x+"px";
+            oBox.style.top=y+"px";
+            },20)
+
+            
+       
+    </script>
+</body>
+</html>

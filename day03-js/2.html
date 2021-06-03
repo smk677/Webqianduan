@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <input type="text" id="xx">
+        <button type="button" id="btn">点击</button>
+        <p id="shur">dsad</p>
+        <script>
+          var oXx=document.getElementById("xx");
+          var oBtn=document.getElementById("btn");
+          var oShur=document.getElementById("shur");
+          oBtn.onclick=function(){
+              var xm=oXx.value;
+              console.log(xm);
+              //innerHTML向对象插入内容 或 获取对象的内容
+              //oShur.innerHTML = oShur.innerHTML + "<br>" + xm;
+              oShur.innerHTML+="<br>"+xm
+          }
+        </script>
+    </body>
+</html>

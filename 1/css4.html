@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+           .a{
+               margin: auto;
+               width: 600px;
+               height: 600px;
+               background: pink;
+               background-image: url(imgs/01.jpg);
+               /* 
+                设置图片平铺（重复）不平铺问题background-repeat:  ;
+                也可以跟background连用：background：url() no-repeat;
+                 background-repeat:no-repeat ;
+                */
+                background-repeat: repeat-y;/* 纵向平铺  repeat-x横向平铺*/
+               /* 
+               使背景图片刚好铺满整个盒子的大小
+                background-size: 100%  100%;
+                */
+              /* 
+              设置背景图的位置
+              background-position: x坐标 y坐标;
+               background-position: center center;
+               如果是设置一个置（位置）,那另一个默认居中
+                background-position: center;
+                 background-position: 10px center;
+               */
+              
+           }
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            <span>刘德华真他妈帅！！！！！</span>
+        </div>
+    </body>
+</html>

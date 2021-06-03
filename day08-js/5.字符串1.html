@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+          截取字符串：substr()、subString()、slice()
+             substr():
+                参数1：开始的下标
+                参数2:截取的长度
+             subString():
+                参数1：开始的下标(负数默认为0)
+                参数2：结束的下标（不包含）
+                如果参数2小于参数1，则会自行换位置，在进行截取
+             slice():
+               参数1：执行开始的下标
+               参数2：指定结束的下标
+               如果参数为负，则都是倒着数，然后开始截取
+    
+        */
+        var str=" hello world ";
+        console.log(str.substr(1,4))//hell
+        console.log(str.substring(1,4));//从1开始截到4（不包含），hel
+        console.log(str.substring(4,1));//参数2小于参数1,交换位置在截取，hel
+        console.log(str.substring(-2, 5));// hell
+
+        console.log(str.slice(-3,0));//<empty string>
+
+
+       /* 
+        字符串转换：
+        toUpperCase():
+           字母全部转换为大写
+        toLoWerCase():
+           字母全部转化为小写
+        
+        将字符串转为数组
+         split():
+             将字符串转为数组
+             - 如果不传参，则把字符串当做数组唯一一个值
+             - 可以传递参数，控制字符串以什么字符进行切割 转换为数组
+       */
+       var str = "HEllO hAi JInG";
+        console.log(str.split());//如果不传参，则把字符串当做数组唯一一个值
+        console.log(str.split(" "));//以空格进行切割
+        console.log(str.split("")); //每个字符进行切割
+      
+        /* 
+            字符串去空格
+                trim();前后去空格
+                trimEnd();后去空格
+                trimStart();前去空格
+        
+        */
+        var str = "   hai   jing   ";
+        console.log(str.trim());//hai   jing
+        console.log(str.trimEnd());//   hai   jing
+        console.log(str.trimStart());//hai   jing   
+   </script>
+</body>
+</html>

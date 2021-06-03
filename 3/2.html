@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title></title>
+       <meta charset="utf-8"/>
+       <style>
+             .checkbox{
+                 margin: 0;
+                 padding: 0;
+                 list-style-type: none;
+                 width: 500px;
+                 border: 1px solid blue;
+             }
+             .checkbox::after{
+               content: "";
+               display: block;
+               clear: both;
+             }
+
+             .checkbox li {
+                 float: left;
+             }
+             .checkbox li label{
+                 display: inline-block;
+                 margin-bottom: 10px;
+                 width: 400px;
+                 border: 1px solid red;
+             }
+             .checkbox li label::before{
+                display:inline-block;
+                margin-right: 10px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid yellow;
+             }
+             .checkbox li input{
+                 display: none;
+             }
+       </style>
+    </head>
+    <body>
+        <ul class="checkbox">
+            <li>
+                <input type="checkbox" name="sz1" id="xz1"><label for="xz1">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="checkbox" name="sz2" id="xz2"><label for="xz2">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="checkbox" name="sz3" id="xz3"><label for="xz3">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="checkbox" name="sz4" id="xz4"><label for="xz4">刘德华男神！</label>
+            </li>
+        </ul>
+    </body>
+</html>

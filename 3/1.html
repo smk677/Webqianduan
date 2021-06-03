@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title></title>
+       <meta charset="utf-8"/>
+       <style>
+         .radio{
+             margin: 0;
+             padding: 0;
+             list-style-type: none;
+           /*   border: 1px solid red; */
+         }
+         .radio input{
+             display: none;
+         }
+         .radio li label{
+             display: inline-block;
+             margin-top:10px;
+             width: 200px;
+             height: 30px;
+             line-height:30px;
+            /*  border: 1px solid black; */
+         }
+         .radio li label::before{
+             display: inline-block;
+             content: "✔";
+             color: #fff;
+             margin-right: 10px;
+             width: 30px;
+             height: 30px;
+             text-align: center;
+             border: 1px solid #DE8650;
+         }
+         .radio li input:checked + label::before{
+             background-color:#DE8650;
+         }
+       </style>
+    </head>
+    <body>
+        <ul class="radio">
+            <li>
+                <input type="radio" name="sz" id="xz1"><label for="xz1">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="radio" name="sz" id="xz2"><label for="xz2">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="radio" name="sz" id="xz3"><label for="xz3">刘德华男神！</label>
+            </li>
+            <li>
+                <input type="radio" name="sz" id="xz4"><label for="xz4">刘德华男神！</label>
+            </li>
+        </ul>
+    </body>
+</html>

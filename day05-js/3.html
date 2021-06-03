@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+         变量对象：
+          1.变量对象分为全局对象和局部对象
+          2.变量对象是在本段代码中，储存了上下文的所有变量和函数
+          3.全局变量对象就是window对象，全局对象和函数都是window对象
+          第一步：进入局部代码，会先创建局部变量对象，包含所有形参和实参
+          第二部：把所有的函数以键值对的形式放入对象中，如果跟形参或者实参重名，则替换
+          第三步：把所有声明的变量放入变量对象中，值默认是undefined
+         */
+         //案例
+         /* 
+         模拟下面代码变量提升：
+            var VO={
+                a:1,
+               // c:2,
+                arguments:[1,2,3],
+                b:undefined,
+                c:function(){}//函数是一个整体，所有一起提升，并且覆盖率前面的实参c
+                d:undefined,
+                //c:undefined//提升变量的时候，如果和函数或形参同名，则不会覆盖之前的值
+            }
+          */
+         function fun(a,c){
+             console.log(a);
+             console.log(b);
+             console.log(c);
+             console.log(d);
+             var b=3;
+             function c(){}
+             var d=function(){}
+             b=4;
+             var c=6;
+         }
+         fun(1,2,3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                font-size: 0px;
+            }
+          .father{
+              border: red dashed 1px;
+              width: 500px;
+              height: 500px;
+              text-align: center;
+              display: table-cell;
+              vertical-align:middle;
+              /* 
+               设置行高,在块状元素中，表示每行的行高最小为500px
+               line-height: 500px;
+               */
+              
+          }
+          span{
+              font-size: 20px;
+              display:inline-block;
+              /* 
+              解决文字换行时从父元素继承的水平居中效果
+                 text-align: left;
+               */
+               text-align: left;
+               background-color: rosybrown;
+
+          }
+       </style>   
+    </head>
+    <body>
+       <div class="father">
+            <span>十大大大大大举行嘘嘘春节快乐</span> 
+            <span>十大大大大大举行嘘嘘春节快乐</span> 
+            <span>十大大大大大举行嘘嘘春节快乐</span> 
+       </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            overflow: hidden;
+        }
+
+        #con {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 30px;
+        }
+
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="con"></div>
+    </div>
+
+    <script>
+        /* 
+        （函数行参调用）
+          clientX:获取事件发生时，鼠标到窗口边缘的距离
+          offsetX:获取事件发生时，鼠标到目标元素的距离
+          pageX:获取事件发生时，鼠标到文档边缘的距离
+          screenX:获取事件发生时，鼠标到屏幕边缘的距离
+        */
+       var oBox=document.querySelector("#box");
+       var oCon=document.querySelector("#con");
+        oBox.onclick=function(e){
+        //    console.log(e.clientX);//鼠标到窗口边缘的距离
+        // console.log(e.offsetX);//鼠标到目标元素的距离
+        // console.log(e.pageX);//鼠标到文档边缘的距离
+        console.log(e.screenX);//鼠标到屏幕边缘的距离
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        /* 
+          代码的同步与异步：
+             代码分为同步代码和异步代码
+             1.就我们目前学的来说，事件函数的执行是异步
+             2.其它都是同步的（绑定事件是同步的）
+             3.异步代码是等同步代码全部执行完成以后才会执行
+        */
+       var oUl=document.getElementById("box");
+       console.log(oUl);
+       var oLis=oUl.getElementsByTagName("li");
+       console.log(oLis);
+
+       for(var i=0;i<oLis.length;i++){
+            console.log(i);
+            //事件函数的执行是异步,但是绑定事件是同步的
+            oLis[i].onclick=function(){
+                console.log(i);//3
+                oLis[i].style.backgroundColor="red";//oLis[i] is undefined
+            }
+       }
+    </script>
+</body>
+</html>

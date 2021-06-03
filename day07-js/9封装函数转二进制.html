@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+           封装函数，传入10进制，返回二进制
+        */
+       function to2b(num){
+           var array=[];
+            while(num>0){
+              var yu=num%2;
+              array.push(yu);
+              num=parseInt(num/2);
+            }
+
+            //console.log(array.reverse());
+            console.log(array);
+            //数组转字符串
+            var str="";
+            while(array.length>0){
+                str+=array.pop();
+            }
+            console.log(str);
+       }
+       to2b(100);
+    </script>
+</body>
+</html>

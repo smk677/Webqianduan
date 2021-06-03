@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+        body{
+            background-color: #ccc;
+        }
+       #father{
+           position: relative;
+           margin: 100px auto;
+           width:900px;
+           height: 500px;
+           border: 1px solid red;
+       }
+       #father div{
+           background-color: #fff;
+           text-align: center;
+       }
+       .one{
+           position: absolute;
+           bottom: 30px;
+           left: 50px;
+           width: 150px;
+           height: 200px;
+           border: 1px solid black;
+       }
+       .one img{
+        margin: 10px auto;
+           width: 130px;
+           height: 180px;
+       }
+       .two{
+          position: absolute;
+           top: 60px;
+           left: 100px;
+           width: 80px;
+           height: 100px;
+           border: 1px solid black;
+           transform: rotate(-10deg);
+       }
+       .two img{
+        margin: 10px 5px;
+           width: 60px;
+           height: 80px;
+       }
+       .three{
+        position: absolute;
+           top: 30px;
+           left: 130px;
+           width: 80px;
+           height: 100px;
+           border: 1px solid black;
+           transform: rotate(30deg);
+       }
+       .three img{
+        margin: 10px 5px;
+           width: 60px;
+           height: 80px;
+       }
+       .four{
+        position: absolute;
+           top: 200px;
+           left: 400px;
+           width: 150px;
+           height: 200px;
+           border: 1px solid black;
+           transform: rotate(-10deg);
+       }
+       .four img{
+        margin: 10px 5px;
+           width: 130px;
+           height: 180px;
+       }
+       .five{
+           position: absolute;
+           top: 200px;
+           left: 350px;
+           width: 50px;
+           height: 80px;
+           border: 1px solid black;
+           transform: rotate(-50deg);
+       }
+       .five img{
+           margin: 10px 5px;
+           width: 30px;
+           height: 60px;
+       }
+       .six{
+         position: absolute;
+           bottom: 200px;
+           right: 200px;
+           width: 50px;
+           height: 80px;
+           border: 1px solid black;
+           transform: rotate(90deg);
+       }
+       .six img{
+           margin: 10px 5px;
+           width: 30px;
+           height: 60px;
+       }
+       .seven{
+          position: absolute;
+           top: 100px;
+           right: 250px;
+           width: 150px;
+           height: 200px;
+           border: 1px solid black;
+           transform: rotate(70deg);
+       }
+       .seven img{
+           margin: 10px 5px;
+           width: 130px;
+           height: 180px;
+       }
+       #father  div:hover{
+           transform: rotate(0deg) scale(1.2);
+           /* transition-property:里面放的时属性，不能时值 */
+           transition-property: transform;
+           transition-duration: 0.5s;
+           transition-timing-function: linear;
+
+       }
+	</style>
+</head>
+
+<body>
+    <div id="father">
+        <div class="one">
+            <img src="./imgs/33d5549585dd4c9eac5213332b8b9501.jpg" alt="">
+        </div>
+        <div class="two">
+            <img src="./imgs/3638f61d8a1d4ea0b5e2e3b180353c6a.jpg" alt="">
+        </div>
+        <div class="three">
+            <img src="./imgs/434c3e1b28bb46f89c680981ba5fc8a0.jpg" alt="">
+        </div>
+        <div class="four">
+            <img src="./imgs/45b48ab655714975ac4c9cc7ae20a064.jpg" alt="">
+        </div>
+        <div class="five">
+            <img src="./imgs/5a0d5a3521a3402f94fa824d700e1749.jpg" alt="">
+        </div>
+        <div class="six">
+            <img src="./imgs/7bf5a149998548548e4563e5041e121a.jpg" alt="">
+        </div>
+        <div class="seven">
+            <img src="./imgs/9a8f253fcd4944d19c9d9ce82390d1ed.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>  

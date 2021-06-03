@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* 
+            1.判断context
+            2.给context扩展一个方法ff
+            3.调用context.ff
+            4.删除ff方法
+            5.获取实参 在调用ff的时候 传入
+            6.把ff这个名字换了
+        */
+       Function.prototype.mycall=function(context){
+           //根据call的特征判断传进来的context数据类型
+           //如果context是null或者undefined 则context应该为window
+            if(context===null || context===undefined){
+                context=window;
+            }        
+          if(typeof context!="object" && typeof context!="function"){
+               context=Object(context);
+          }
+          //获取所有的实参
+          console.log(arguments);
+           //把它变成一个真正的数组,并截取除去类型后面的值
+           var arg=Array.from(arguments).slice(1);//从一下标开始截，截到末尾
+           console.log(arg);
+
+           //把this的指向变为context
+           context.ff=this
+           context.ff();
+           eval("context.ff("+arg.toString()+")");
+
+           //因为逻辑关系，所有要删除你添加的contetx.ff方法
+           delete context.ff;
+       }
+       function fn(a,b){
+        console.log(a, b);
+        console.log(this, a + b);
+       }
+       fn.mycall(1,1,2);
+    </script>
+</body>
+</html>

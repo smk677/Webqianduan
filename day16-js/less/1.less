@@ -1,0 +1,76 @@
+//无参数混合
+/* .clear(){
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+} */
+//有参数混合
+.clear(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background-color: @b;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+// 3.参数默认值
+/* .clear(@w: 400px, @h:400px, @c: cadetblue) {
+    width: @w;
+    height: @h;
+    background-color: @c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+} */
+
+//清浮动
+.clearboth(){
+    *zoom: 1;//兼容IE8-,开启haslayout,类似于BFC 清除浮动
+
+     &::after{
+         content: "\200B";//200B就是空字符串
+         height: 0;
+         display: block;
+         clear: both;
+     }
+}
+
+
+#out{
+    width: 400px;
+    // height: 400px;
+    background-color: cadetblue;
+    // position: relative;
+    // .clear();//参数默认值
+    // .clear(@w:400px,@h:400px,@b:cadetblue);//有参引用
+    // .clear(400px,400px,cadetblue);//有参引用
+    // .clear();无参引用
+    .clearboth();
+   /*  position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         margin: auto; */
+     #box{
+         width: 200px;
+         height:200px;
+         background-color:red;
+        float: left;
+       /*   position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         margin: auto; */
+     } 
+}
